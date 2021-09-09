@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "COCOGOOSE";
+  src:
+    url("../../webfonts_COCOGOOSE/COCOGOOSE.ttf.woff") format("woff"),
+    url("../../webfonts_COCOGOOSE/COCOGOOSE.ttf.svg#COCOGOOSE")
+    format("svg"),
+    url("../../webfonts_COCOGOOSE/COCOGOOSE.ttf.eot"),
+    url("../../webfonts_COCOGOOSE/COCOGOOSE.ttf.eot?#iefix")
+    format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+  color: white;
+}
+
+@font-face {
+  font-family: 'COCOGOOSE-LETTERPRESS';
+  src:
+    url('../../webfonts_COCOGOOSE-LETTERPRESS/COCOGOOSE-LETTERPRESS.ttf.woff') format('woff'),
+    url('../../webfonts_COCOGOOSE-LETTERPRESS/COCOGOOSE-LETTERPRESS.ttf.svg#COCOGOOSE-LETTERPRESS') format('svg'),
+    url('../../webfonts_COCOGOOSE-LETTERPRESS/COCOGOOSE-LETTERPRESS.ttf.eot'),
+    url('../../webfonts_COCOGOOSE-LETTERPRESS/COCOGOOSE-LETTERPRESS.ttf.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap");
