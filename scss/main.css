@@ -289,7 +289,7 @@ Breakpoints
 
 .header nav .logoPlace {
   position: relative;
-  height: 2.5rem;
+  height: 3rem;
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
 }
@@ -379,7 +379,7 @@ main_speakers
 
 @media (min-width: 48rem) {
   .main {
-    top: 5.725rem;
+    top: 6.225rem;
   }
 }
 
@@ -810,6 +810,120 @@ main_speakers
 }
 
 .main__speakers .speakersContent .speakerCard .speakerData .speakerInfo {
+  font-size: 0.75rem;
+  color: #3d3d3d;
+}
+
+.footer {
+  position: relative;
+}
+
+@media (min-width: 48rem) {
+  .footer {
+    top: 6.225rem;
+  }
+}
+
+.footer .sponsors {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #424246;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+
+@media (min-width: 48rem) {
+  .footer .sponsors {
+    padding-left: 14%;
+    padding-right: 14%;
+    padding-top: 2.75rem;
+    padding-bottom: 2.75rem;
+  }
+}
+
+.footer .sponsors h2 {
+  font-size: 1.375rem;
+  color: #bababa;
+}
+
+.footer .sponsors .partnersLogoContainer {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.footer .sponsors .partnersLogoContainer > img {
+  height: 2.75rem;
+  -webkit-filter: sepia(100%);
+          filter: sepia(100%);
+}
+
+.footer .sponsors .partnersLogoContainer .logoPartner1 {
+  content: url("../../img/partner1.png");
+}
+
+.footer .sponsors .partnersLogoContainer .logoPartner2 {
+  content: url("../../img/partner2.png");
+}
+
+.footer .sponsors .partnersLogoContainer .logoPartner3 {
+  content: url("../../img/partner3.png");
+}
+
+.footer .sponsors .partnersLogoContainer .logoPartner4 {
+  content: url("../../img/partner4.jpg");
+}
+
+.footer .sponsors .partnersLogoContainer .logoPartner5 {
+  content: url("../../img/partner5.png");
+}
+
+.footer .copyrightsContainer {
+  background-color: whitesmoke;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 3rem;
+}
+
+@media (min-width: 48rem) {
+  .footer .copyrightsContainer {
+    padding-left: 14%;
+    padding-right: 14%;
+    padding-top: 4.125rem;
+    padding-bottom: 4.125rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.footer .copyrightsContainer .logoPlaceholder {
+  position: relative;
+  height: 3rem;
+}
+
+.footer .copyrightsContainer .logoPlaceholder .hostLogo {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  height: 100%;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer .copyrightsContainer .copyrights {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
   font-size: 0.75rem;
   color: #3d3d3d;
 }
