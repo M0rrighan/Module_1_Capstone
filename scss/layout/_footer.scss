@@ -65,8 +65,6 @@
     @include wider-than($mainBp) {
       @include px($lrSpacing-desktop);
       @include py(4.125rem);
-
-      justify-content: flex-start;
     }
 
     .logoPlaceholder {
@@ -86,6 +84,32 @@
       gap: $small; // 12px
       font-size: $fs_xsmall; //0.75rem-12px
       color: $darkGrey;
+    }
+  }
+}
+
+#about .footer {
+  @extend .footer;
+
+  @include wider-than($mainBp) {
+    .sponsors {
+      display: none;
+    }
+
+    .copyrightsContainer {
+      background-color: $darkGrey;
+
+      .logoPlaceholder {
+        .hostLogo {
+          @include wider-than($mainBp) {
+            filter: none;
+          }
+        }
+      }      
+
+      .copyrights {
+        color: $almostWhite;
+      }
     }
   }
 }

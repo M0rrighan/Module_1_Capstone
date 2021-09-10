@@ -51,10 +51,10 @@ body {
 
 @use "sass:math";
 /*******************************
-Font sizes
+Most used Font sizes
 ********************************/
 /*******************************
-Mostly used size and spacing values
+Most used size and spacing values
 ********************************/
 /*******************************
 Preset Sizes & Spacing
@@ -1038,17 +1038,17 @@ Breakpoints
   background-blend-mode: overlay;
 }
 
-.footer {
+.footer, #about .footer {
   position: relative;
 }
 
 @media (min-width: 48rem) {
-  .footer {
+  .footer, #about .footer {
     top: 6.225rem;
   }
 }
 
-.footer .sponsors {
+.footer .sponsors, #about .footer .sponsors {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1061,7 +1061,7 @@ Breakpoints
 }
 
 @media (min-width: 48rem) {
-  .footer .sponsors {
+  .footer .sponsors, #about .footer .sponsors {
     padding-left: 14%;
     padding-right: 14%;
     padding-top: 2.75rem;
@@ -1069,44 +1069,44 @@ Breakpoints
   }
 }
 
-.footer .sponsors h2 {
+.footer .sponsors h2, #about .footer .sponsors h2 {
   font-size: 1.375rem;
   color: #bababa;
 }
 
-.footer .sponsors .partnersLogoContainer {
+.footer .sponsors .partnersLogoContainer, #about .footer .sponsors .partnersLogoContainer {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 3rem;
 }
 
-.footer .sponsors .partnersLogoContainer > img {
+.footer .sponsors .partnersLogoContainer > img, #about .footer .sponsors .partnersLogoContainer > img {
   height: 2.75rem;
   -webkit-filter: sepia(100%);
           filter: sepia(100%);
 }
 
-.footer .sponsors .partnersLogoContainer .logoPartner1 {
+.footer .sponsors .partnersLogoContainer .logoPartner1, #about .footer .sponsors .partnersLogoContainer .logoPartner1 {
   content: url("../../img/partner1.png");
 }
 
-.footer .sponsors .partnersLogoContainer .logoPartner2 {
+.footer .sponsors .partnersLogoContainer .logoPartner2, #about .footer .sponsors .partnersLogoContainer .logoPartner2 {
   content: url("../../img/partner2.png");
 }
 
-.footer .sponsors .partnersLogoContainer .logoPartner3 {
+.footer .sponsors .partnersLogoContainer .logoPartner3, #about .footer .sponsors .partnersLogoContainer .logoPartner3 {
   content: url("../../img/partner3.png");
 }
 
-.footer .sponsors .partnersLogoContainer .logoPartner4 {
+.footer .sponsors .partnersLogoContainer .logoPartner4, #about .footer .sponsors .partnersLogoContainer .logoPartner4 {
   content: url("../../img/partner4.jpg");
 }
 
-.footer .sponsors .partnersLogoContainer .logoPartner5 {
+.footer .sponsors .partnersLogoContainer .logoPartner5, #about .footer .sponsors .partnersLogoContainer .logoPartner5 {
   content: url("../../img/partner5.png");
 }
 
-.footer .copyrightsContainer {
+.footer .copyrightsContainer, #about .footer .copyrightsContainer {
   background-color: whitesmoke;
   padding-left: 2.5%;
   padding-right: 2.5%;
@@ -1118,23 +1118,20 @@ Breakpoints
 }
 
 @media (min-width: 48rem) {
-  .footer .copyrightsContainer {
+  .footer .copyrightsContainer, #about .footer .copyrightsContainer {
     padding-left: 14%;
     padding-right: 14%;
     padding-top: 4.125rem;
     padding-bottom: 4.125rem;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
   }
 }
 
-.footer .copyrightsContainer .logoPlaceholder {
+.footer .copyrightsContainer .logoPlaceholder, #about .footer .copyrightsContainer .logoPlaceholder {
   position: relative;
   height: 3rem;
 }
 
-.footer .copyrightsContainer .logoPlaceholder .hostLogo {
+.footer .copyrightsContainer .logoPlaceholder .hostLogo, #about .footer .copyrightsContainer .logoPlaceholder .hostLogo {
   -webkit-filter: invert(1);
           filter: invert(1);
   height: 100%;
@@ -1142,7 +1139,7 @@ Breakpoints
   margin-bottom: 0.75rem;
 }
 
-.footer .copyrightsContainer .copyrights {
+.footer .copyrightsContainer .copyrights, #about .footer .copyrightsContainer .copyrights {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1150,5 +1147,27 @@ Breakpoints
   gap: 0.75rem;
   font-size: 0.75rem;
   color: #3d3d3d;
+}
+
+@media (min-width: 48rem) {
+  #about .footer .sponsors {
+    display: none;
+  }
+  #about .footer .copyrightsContainer {
+    background-color: #3d3d3d;
+  }
+}
+
+@media (min-width: 48rem) and (min-width: 48rem) {
+  #about .footer .copyrightsContainer .logoPlaceholder .hostLogo {
+    -webkit-filter: none;
+            filter: none;
+  }
+}
+
+@media (min-width: 48rem) {
+  #about .footer .copyrightsContainer .copyrights {
+    color: whitesmoke;
+  }
 }
 /*# sourceMappingURL=main.css.map */
