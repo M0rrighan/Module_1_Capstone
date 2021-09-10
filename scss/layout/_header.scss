@@ -28,6 +28,27 @@
   }
 }
 
+nav {
+  display: none;
+  box-shadow: 0 0.25rem 2rem 0.5rem hsla(0, 0%, 0%, 0.3);
+
+  @include px($lrSpacing-desktop);
+
+  @include wider-than($mainBp) {
+    display: flex;
+  }
+
+  .logoPlace {
+    position: relative;
+    height: $logoImgH; //40px
+
+    @include my($navBarSpacingTb); //12px
+    .eventLogo {
+      height: 100%;
+    }
+  }
+}
+
 .openMenuBtn {
   left: $menuTopLeftSpace;
 }
@@ -106,37 +127,16 @@
   }
 }
 
-nav {
-  display: none;
-  box-shadow: 0 0.25rem 2rem 0.5rem hsla(0, 0%, 0%, 0.3);
-
-  @include px($lrSpacing-desktop);
-
-  @include wider-than($mainBp) {
-    display: flex;
-  }
-
-  .logoPlace {
-    position: relative;
-    height: $logoImgH; //40px
-
-    @include my($navBarSpacingTb); //12px
-    .eventLogo {
-      height: 100%;
+.navlinks {
+  > a {
+    &:not(:first-child) {
+      margin-left: $xbig; // 3rem-48px
     }
-  }
 
-  .navlinks {
-    > a {
-      &:not(:first-child) {
-        margin-left: $xbig; // 3rem-48px
-      }
+    color: $lightGrey;
 
-      color: $lightGrey;
-
-      &:hover {
-        color: $orange;
-      }
+    &:hover {
+      color: $orange;
     }
   }
 }
