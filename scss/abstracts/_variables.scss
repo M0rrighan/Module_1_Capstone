@@ -10,9 +10,13 @@ $lightOrange: hsl(6, 82%, 69%);
 $almostWhite: hsl(0, 0%, 96%);
 $white: hsl(0, 0%, 100%);
 
+// ----------------------------
 // Font sizes
-$fs_small: 0.75rem; //12px used for: TopBar_links
-$fs_regular: 1rem; //16px --used for: MainInfo_description, MainInfo_location
+// ----------------------------
+$fs_xsmall: 0.75rem; //12px used for: TopBar_links
+$fs_small: 0.875rem; //14px --used for: programCardTitle@Dsk, programCardDescription
+$fs_regular: 1rem; //16px --used for: MainInfo_description, MainInfo_location, program_a_link
+$fs_medium1: 1.125rem; // 18px --used for: programCardTitle,
 //$medium: 1.375rem; //22px --used for: MainInfo_description_mt@mob,
      //description_px_py@Dsk, MainProgram_pb, programContent_my,
 $fs_large: 2rem; //32px --used for: MainInfo_h2_@mob, MainProgram_h2, mobileMenu_navlinks
@@ -20,7 +24,9 @@ $fs_xlarge: 2.25rem; //36px --used for: MainInfo_h2_@Dsk, MainInfo_date,
 $fs_big: 2.75rem; //44px --used for: Open_Close_MenuBtnIcon, MainInfo_h1_@mob,
 $fs_xbig: 3rem; //48px --used for: MainInfo_h1_@Dsk
 
-// Spacing - general
+// -------------------------------------------
+// Mostly used size and spacing values
+// -------------------------------------------
 $small: 0.75rem; //12px used for: MainInfo_date_py, MainInfo_description_mt@Dsk
 $regular: 1rem; //16px --used for: MainInfo_location, separator_my,
 $medium: 1.375rem; //22px --used for: MainInfo_description_mt@mob,
@@ -28,15 +34,17 @@ $medium: 1.375rem; //22px --used for: MainInfo_description_mt@mob,
 $large: 2rem; //32px --used for: MainInfo_h2_@mob, MainProgram_h2,
 $xlarge: 2.25rem; //36px --used for: separatorMedium_width
 $big: 2.75rem; //44px --used for: Open_Close_MenuBtnIcon, MainInfo_h1_@mob,
-$xbig: 3rem; //48px --used for:MainProgram_h2_mt,
+$xbig: 3rem; //48px --used for:MainProgram_h2_mt
 
+// ---------------------------
 // Preset Sizes & Spacing
+// ---------------------------
 $socialIconH: $regular; //16px
 $logoImgH: 2.5rem; //40px
 $topBarSpacingTb: 0.3625rem; //5.8px
 $navBarSpacingTb: $small; //12px
 $menuTopLeftSpace: 1.625rem; //26px
-// main page padding:
+// main page paddings:
 $lrSpacing-desktop: 14%;
 $lrSpacing-mobile: 2.5%;
 $lSpace-desk-About: 21.8%;
@@ -47,15 +55,17 @@ $lrSpacing-mobile-about: 5%;
 // NavBar (2 * 0.75rem top and bottom margin, 2.5 rem logo height)
 $mainFromTop: ($socialIconH + $logoImgH + (2 * $topBarSpacingTb) + (2 * $navBarSpacingTb));
 
+//---------------
 // Breakpoints
+// --------------
 $mainBp: 48rem; //768px
 $mainBpLess: 47.9375rem; //767px
 
-// Url for background image at top of main section
+// Url for background images at top of main section
 $mainBgImgUrl: "../../img/degustazioneInVigna.png";
 $textBgImgUrl: "../../img/tramonto_vigna.jpg";
 $eventLogo: "../../img/eventLogo.png";
-$hostLogo: "../../img/toso-logo.png";
+$hostLogo: "../../img/laFicaia.jpg";
 $logoPartner1: "../../img/partner1.png";
 $logoPartner2: "../../img/partner2.png";
 $logoPartner3: "../../img/partner3.png";

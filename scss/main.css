@@ -438,4 +438,159 @@ body {
 .main__info .location {
   font-size: 1rem;
 }
+
+.main__program {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 1.375rem;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  background-color: #292c33;
+  background-size: 25px 25px;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(70%, transparent), color-stop(0, #292c33), to(#292c33)), -webkit-gradient(linear, left bottom, left top, color-stop(70%, transparent), color-stop(0, #292c33), to(#292c33)), -webkit-gradient(linear, left bottom, right top, color-stop(5%, transparent), color-stop(0, #21232c), color-stop(13%, #21232c), color-stop(0, transparent), color-stop(55%, transparent), color-stop(0, #21232c), color-stop(63%, #21232c), color-stop(0, transparent)), -webkit-gradient(linear, left top, right bottom, color-stop(5%, transparent), color-stop(0, #21232c), color-stop(13%, #21232c), color-stop(0, transparent), color-stop(55%, transparent), color-stop(0, #21232c), color-stop(63%, #21232c), color-stop(0, transparent));
+  background-image: linear-gradient(to left, transparent 70%, #292c33 0, #292c33 100%), linear-gradient(to top, transparent 70%, #292c33 0, #292c33 100%), linear-gradient(to top right, transparent 5%, #21232c 0, #21232c 13%, transparent 0, transparent 55%, #21232c 0, #21232c 63%, transparent 0), linear-gradient(to bottom right, transparent 5%, #21232c 0, #21232c 13%, transparent 0, transparent 55%, #21232c 0, #21232c 63%, transparent 0);
+  background-position: -0.5px 0, 0 0, 7.5px 0, 7.5px 7.5px;
+  background-repeat: repeat;
+  -webkit-transition: 900ms ease-in;
+  transition: 900ms ease-in;
+}
+
+@media (min-width: 48rem) {
+  .main__program {
+    padding-left: 14%;
+    padding-right: 14%;
+  }
+}
+
+.main__program:hover {
+  background-position: 24.5px 0px, 0px -24.5px, 7.5px 0, 7.5px 7.5px;
+  -webkit-transition: 900ms ease-in;
+  transition: 900ms ease-in;
+}
+
+.main__program .sectionTitle {
+  color: white;
+  font-size: 2rem;
+  padding-top: 3rem;
+}
+
+.main__program ul.programContent {
+  margin-top: 1.375rem;
+  margin-bottom: 1.375rem;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (min-width: 48rem) {
+  .main__program ul.programContent {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    gap: 0.175rem;
+  }
+}
+
+.main__program ul.programContent li.programItemCard {
+  background-color: #ffffff20;
+  border: 2px solid transparent;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 17% 25% 58%;
+      grid-template-columns: 17% 25% 58%;
+}
+
+.main__program ul.programContent li.programItemCard:hover {
+  border-color: white;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0px 0rem 1.5rem 1.5rem rgba(0, 0, 0, 0.35);
+          box-shadow: 0px 0rem 1.5rem 1.5rem rgba(0, 0, 0, 0.35);
+}
+
+@media (min-width: 48rem) {
+  .main__program ul.programContent li.programItemCard {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 27% 5% 66%;
+        grid-template-rows: 27% 5% 66%;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+}
+
+.main__program ul.programContent li.programItemCard .programCardIcon,
+.main__program ul.programContent li.programItemCard .programCardTitle {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main__program ul.programContent li.programItemCard .programCardIcon i {
+  color: white;
+  background-color: transparent;
+  font-size: 2.25rem;
+}
+
+.main__program ul.programContent li.programItemCard .programCardTitle {
+  color: #ec5241;
+  font-size: 1.125rem;
+  font-weight: bold;
+  word-wrap: break-word;
+  margin-left: unset;
+}
+
+@media (min-width: 48rem) {
+  .main__program ul.programContent li.programItemCard .programCardTitle {
+    font-size: 0.75rem;
+    margin-left: auto;
+  }
+}
+
+.main__program ul.programContent li.programItemCard .programCardDescription {
+  color: whitesmoke;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  padding-right: 0.75rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 48rem) {
+  .main__program ul.programContent li.programItemCard .programCardDescription {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.main__program button.contact {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 1.375rem;
+  color: white;
+  background-color: #ec5241;
+  border-width: 0;
+  border-color: unset;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.main__program a {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: whitesmoke;
+  text-decoration: underline;
+}
 /*# sourceMappingURL=main.css.map */
