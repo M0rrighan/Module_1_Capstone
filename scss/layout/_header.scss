@@ -5,137 +5,137 @@
   right: 0;
   background-color: $white;
   z-index: 5;
+}
 
-  .topBar {
-    display: none;
+.topBar {
+  display: none;
 
-    @include wider-than($mainBp) {
-      display: flex;
-    }
-
-    @include px($lrSpacing-desktop);
-    @include py($topBarSpacingTb);
-
-    background-color: $darkGrey;
-    color: $white;
-    gap: 1.25rem;
-    font-size: $fs_xsmall; //12px
-
-    .socials {
-      height: $socialIconH;
-      color: $white;
-    }
-  }
-
-  nav {
-    display: none;
-    box-shadow: 0 0.25rem 2rem 0.5rem hsla(0, 0%, 0%, 0.3);
-
-    @include px($lrSpacing-desktop);
-
-    @include wider-than($mainBp) {
-      display: flex;
-    }
-
-    .logoPlace {
-      position: relative;
-      height: $logoImgH; //40px
-
-      @include my($navBarSpacingTb); //12px
-      .eventLogo {
-        height: 100%;
-      }
-    }
-
-    .navlinks {
-      > a {
-        &:not(:first-child) {
-          margin-left: $xbig; // 3rem-48px
-        }
-
-        color: $lightGrey;
-
-        &:hover {
-          color: $orange;
-        }
-      }
-    }
-  }
-
-  .openMenuBtn {
-    left: $menuTopLeftSpace;
-  }
-
-  .closeMenuBtn {
-    right: $menuTopLeftSpace;
-  }
-
-  .mobile-menu {
-    position: absolute;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
+  @include wider-than($mainBp) {
     display: flex;
-    flex-direction: column;
-    gap: $regular; // 1rem
-    font-size: $fs_large; // 2rem-32px
-    color: $lightGrey;
-    background-color: $orange;
-    background-image:
-      linear-gradient(to left, transparent 70%, $orange 0, $orange 100%),
-      linear-gradient(to top, transparent 70%, $orange 0, $orange 100%),
-      linear-gradient(
-        to top right,
-        transparent 5%,
-        $lightOrange 0,
-        $lightOrange 13%,
-        transparent 0,
-        transparent 55%,
-        $lightOrange 0,
-        $lightOrange 63%,
-        transparent 0
-      ),
-      linear-gradient(
-        to bottom right,
-        transparent 5%,
-        $lightOrange 0,
-        $lightOrange 13%,
-        transparent 0,
-        transparent 55%,
-        $lightOrange 0,
-        $lightOrange 63%,
-        transparent 0
-      );
-    background-position: -0.5px 0, 0 0, 7.5px 0, 7.5px 7.5px;
-    background-size: 25px 25px;
-    background-repeat: repeat;
+  }
 
-    &-closed {
-      left: -105vw;
-      transition: 300ms ease-in;
+  @include px($lrSpacing-desktop);
+  @include py($topBarSpacingTb);
+
+  background-color: $darkGrey;
+  color: $white;
+  gap: 1.25rem;
+  font-size: $fs_xsmall; //12px
+
+  .socials {
+    height: $socialIconH;
+    color: $white;
+  }
+}
+
+.openMenuBtn {
+  left: $menuTopLeftSpace;
+}
+
+.closeMenuBtn {
+  right: $menuTopLeftSpace;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: $regular; // 1rem
+  font-size: $fs_large; // 2rem-32px
+  color: $lightGrey;
+  background-color: $orange;
+  background-image:
+    linear-gradient(to left, transparent 70%, $orange 0, $orange 100%),
+    linear-gradient(to top, transparent 70%, $orange 0, $orange 100%),
+    linear-gradient(
+      to top right,
+      transparent 5%,
+      $lightOrange 0,
+      $lightOrange 13%,
+      transparent 0,
+      transparent 55%,
+      $lightOrange 0,
+      $lightOrange 63%,
+      transparent 0
+    ),
+    linear-gradient(
+      to bottom right,
+      transparent 5%,
+      $lightOrange 0,
+      $lightOrange 13%,
+      transparent 0,
+      transparent 55%,
+      $lightOrange 0,
+      $lightOrange 63%,
+      transparent 0
+    );
+  background-position: -0.5px 0, 0 0, 7.5px 0, 7.5px 7.5px;
+  background-size: 25px 25px;
+  background-repeat: repeat;
+}
+
+.mobile-menu-closed {
+  left: -105vw;
+  transition: 300ms ease-in;
+}
+
+.mobile-menu-opened {
+  left: 0;
+  transition: 300ms ease-in;
+
+  i {
+    font-size: $fs_big; // 44px
+  }
+
+  a {
+    width: 80%;
+    font-size: $fs_xbig;
+    font-weight: bold;
+    color: $darkGrey;
+    background-color: #ffffff20;
+    border: 2px solid $almostWhite;
+
+    @extend .button;
+    @extend .flex;
+    @extend .flex-jc-c;
+
+    @include py($medium);
+  }
+}
+
+nav {
+  display: none;
+  box-shadow: 0 0.25rem 2rem 0.5rem hsla(0, 0%, 0%, 0.3);
+
+  @include px($lrSpacing-desktop);
+
+  @include wider-than($mainBp) {
+    display: flex;
+  }
+
+  .logoPlace {
+    position: relative;
+    height: $logoImgH; //40px
+
+    @include my($navBarSpacingTb); //12px
+    .eventLogo {
+      height: 100%;
     }
+  }
 
-    &-opened {
-      left: 0;
-      transition: 300ms ease-in;
-
-      i {
-        font-size: $fs_big; // 44px
+  .navlinks {
+    > a {
+      &:not(:first-child) {
+        margin-left: $xbig; // 3rem-48px
       }
 
-      a {
-        width: 80%;
-        font-size: $fs_xbig;
-        font-weight: bold;
-        color: $darkGrey;
-        background-color: #ffffff20;
-        border: 2px solid $almostWhite;
+      color: $lightGrey;
 
-        @extend .button;
-        @extend .flex;
-        @extend .flex-jc-c;
-
-        @include py($medium);
+      &:hover {
+        color: $orange;
       }
     }
   }

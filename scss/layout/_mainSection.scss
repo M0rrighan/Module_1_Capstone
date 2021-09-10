@@ -281,7 +281,7 @@
 
     @include wider-than($mainBp) {
       @include px($lrSpacing-desktop);
-    }    
+    }
 
     h2 {
       font-size: $fs_large; //2rem
@@ -294,7 +294,7 @@
       flex-wrap: wrap;
       gap: $large; // 2rem
 
-      @include my($medium); // 22px     
+      @include my($medium); // 22px
 
       @include wider-than($mainBp) {
         display: grid;
@@ -342,19 +342,20 @@
               background-image:
                 linear-gradient(to top left, transparent 75%, $almostBlack 0),
                 linear-gradient(to top left, $almostBlack 25%, transparent 0),
-                linear-gradient(to top right, $almostBlack 25%, transparent 0),  
+                linear-gradient(to top right, $almostBlack 25%, transparent 0),
                 linear-gradient(to top right, transparent 75%, $almostBlack 0);
               background-size: 17% 17%;
-              background-position: 0 0, -51% -51%, 51% 0, 0px 51%;
+              background-position: 0 0, -51% -51%, 51% 0, 0 51%;
               background-repeat: repeat;
               transition: 500ms ease-in-out;
+
               @include wider-than($mainBp) {
                 opacity: 50%;
               }
             }
 
             &:hover::before {
-              background-position: 51% 0, 0 -51%, 0px 0, -51% 51%;
+              background-position: 51% 0, 0 -51%, 0 0, -51% 51%;
               transition: 500ms ease-in-out;
             }
           }
@@ -456,6 +457,7 @@
     &::after {
       top: 126%;
       right: 89%;
+
       @include wider-than($mainBp) {
         height: 74%;
         width: 75%;
@@ -512,7 +514,7 @@
     p {
       @include wider-than($mainBp) {
         @include px(4.75rem);
-      }      
+      }
     }
   }
 

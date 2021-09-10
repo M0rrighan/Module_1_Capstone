@@ -81,13 +81,13 @@ Breakpoints
   }
 }
 
-.flex, .header .mobile-menu-opened a, #about .header .mobile-menu-opened a, .main__speakers .speakersContent .speakerCard .speakerPicture {
+.flex, .mobile-menu-opened a, .main__speakers .speakersContent .speakerCard .speakerPicture {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.flex-jc-c, .header .mobile-menu-opened a, #about .header .mobile-menu-opened a, .main__speakers .speakersContent .speakerCard .speakerPicture {
+.flex-jc-c, .mobile-menu-opened a, .main__speakers .speakersContent .speakerCard .speakerPicture {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -185,7 +185,7 @@ Breakpoints
   margin-bottom: 0.75rem;
 }
 
-.button, .header .mobile-menu-opened a, #about .header .mobile-menu-opened a {
+.button, .mobile-menu-opened a {
   cursor: pointer;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -193,7 +193,7 @@ Breakpoints
   transition: 300ms ease-in-out;
 }
 
-.button:hover, .header .mobile-menu-opened a:hover, #about .header .mobile-menu-opened a:hover {
+.button:hover, .mobile-menu-opened a:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-box-shadow: inset 0 0 0.75rem 0.75rem rgba(0, 0, 0, 0.2);
@@ -223,7 +223,7 @@ Breakpoints
   color: #3d3d3d;
 }
 
-.button.contact, .header .mobile-menu-opened a.contact, #about .header .mobile-menu-opened a.contact {
+.button.contact, .mobile-menu-opened a.contact {
   margin-top: 2rem;
   margin-bottom: 2rem;
   padding-left: 4rem;
@@ -238,25 +238,25 @@ Breakpoints
   border-radius: 0;
 }
 
-.button.contact:active, .header .mobile-menu-opened a.contact:active, #about .header .mobile-menu-opened a.contact:active {
+.button.contact:active, .mobile-menu-opened a.contact:active {
   background-color: #e32b16;
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
 }
 
-.button.program:hover, .header .mobile-menu-opened a.program:hover, #about .header .mobile-menu-opened a.program:hover {
+.button.program:hover, .mobile-menu-opened a.program:hover {
   color: #f5a69e;
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
 }
 
-.button.program:active, .header .mobile-menu-opened a.program:active, #about .header .mobile-menu-opened a.program:active {
+.button.program:active, .mobile-menu-opened a.program:active {
   color: #f17c6f;
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
 }
 
-.button.expand, .header .mobile-menu-opened a.expand, #about .header .mobile-menu-opened a.expand {
+.button.expand, .mobile-menu-opened a.expand {
   width: 100%;
   border-style: solid;
   margin-top: 2rem;
@@ -273,18 +273,18 @@ Breakpoints
   border-radius: 0.25rem;
 }
 
-.button.expand i.material-icons, .header .mobile-menu-opened a.expand i.material-icons, #about .header .mobile-menu-opened a.expand i.material-icons {
+.button.expand i.material-icons, .mobile-menu-opened a.expand i.material-icons {
   color: #ec5241;
   font-weight: bold;
 }
 
 @media (min-width: 48rem) {
-  .button.expand, .header .mobile-menu-opened a.expand, #about .header .mobile-menu-opened a.expand {
+  .button.expand, .mobile-menu-opened a.expand {
     display: none;
   }
 }
 
-.button.expand:active, .header .mobile-menu-opened a.expand:active, #about .header .mobile-menu-opened a.expand:active {
+.button.expand:active, .mobile-menu-opened a.expand:active {
   border-color: #f17c6f;
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
@@ -299,7 +299,7 @@ Breakpoints
   z-index: 5;
 }
 
-.header .topBar, #about .header .topBar {
+.topBar {
   display: none;
   padding-left: 14%;
   padding-right: 14%;
@@ -312,66 +312,27 @@ Breakpoints
 }
 
 @media (min-width: 48rem) {
-  .header .topBar, #about .header .topBar {
+  .topBar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
-.header .topBar .socials, #about .header .topBar .socials {
+.topBar .socials {
   height: 1rem;
   color: white;
 }
 
-.header nav, #about .header nav {
-  display: none;
-  -webkit-box-shadow: 0 0.25rem 2rem 0.5rem rgba(0, 0, 0, 0.3);
-          box-shadow: 0 0.25rem 2rem 0.5rem rgba(0, 0, 0, 0.3);
-  padding-left: 14%;
-  padding-right: 14%;
-}
-
-@media (min-width: 48rem) {
-  .header nav, #about .header nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-.header nav .logoPlace, #about .header nav .logoPlace {
-  position: relative;
-  height: 3rem;
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
-.header nav .logoPlace .eventLogo, #about .header nav .logoPlace .eventLogo {
-  height: 100%;
-}
-
-.header nav .navlinks > a, #about .header nav .navlinks > a {
-  color: #bababa;
-}
-
-.header nav .navlinks > a:not(:first-child), #about .header nav .navlinks > a:not(:first-child) {
-  margin-left: 3rem;
-}
-
-.header nav .navlinks > a:hover, #about .header nav .navlinks > a:hover {
-  color: #ec5241;
-}
-
-.header .openMenuBtn, #about .header .openMenuBtn {
+.openMenuBtn {
   left: 1.625rem;
 }
 
-.header .closeMenuBtn, #about .header .closeMenuBtn {
+.closeMenuBtn {
   right: 1.625rem;
 }
 
-.header .mobile-menu, #about .header .mobile-menu {
+.mobile-menu {
   position: absolute;
   top: 0;
   height: 100vh;
@@ -394,23 +355,23 @@ Breakpoints
   background-repeat: repeat;
 }
 
-.header .mobile-menu-closed, #about .header .mobile-menu-closed {
+.mobile-menu-closed {
   left: -105vw;
   -webkit-transition: 300ms ease-in;
   transition: 300ms ease-in;
 }
 
-.header .mobile-menu-opened, #about .header .mobile-menu-opened {
+.mobile-menu-opened {
   left: 0;
   -webkit-transition: 300ms ease-in;
   transition: 300ms ease-in;
 }
 
-.header .mobile-menu-opened i, #about .header .mobile-menu-opened i {
+.mobile-menu-opened i {
   font-size: 2.75rem;
 }
 
-.header .mobile-menu-opened a, #about .header .mobile-menu-opened a {
+.mobile-menu-opened a {
   width: 80%;
   font-size: 3rem;
   font-weight: bold;
@@ -419,6 +380,45 @@ Breakpoints
   border: 2px solid whitesmoke;
   padding-top: 1.375rem;
   padding-bottom: 1.375rem;
+}
+
+nav {
+  display: none;
+  -webkit-box-shadow: 0 0.25rem 2rem 0.5rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0.25rem 2rem 0.5rem rgba(0, 0, 0, 0.3);
+  padding-left: 14%;
+  padding-right: 14%;
+}
+
+@media (min-width: 48rem) {
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+nav .logoPlace {
+  position: relative;
+  height: 3rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+nav .logoPlace .eventLogo {
+  height: 100%;
+}
+
+nav .navlinks > a {
+  color: #bababa;
+}
+
+nav .navlinks > a:not(:first-child) {
+  margin-left: 3rem;
+}
+
+nav .navlinks > a:hover {
+  color: #ec5241;
 }
 
 #about .header .topBar {
@@ -846,7 +846,7 @@ Breakpoints
   background-image: -webkit-gradient(linear, right bottom, left top, color-stop(75%, transparent), color-stop(0, #21232c)), -webkit-gradient(linear, right bottom, left top, color-stop(25%, #21232c), color-stop(0, transparent)), -webkit-gradient(linear, left bottom, right top, color-stop(25%, #21232c), color-stop(0, transparent)), -webkit-gradient(linear, left bottom, right top, color-stop(75%, transparent), color-stop(0, #21232c));
   background-image: linear-gradient(to top left, transparent 75%, #21232c 0), linear-gradient(to top left, #21232c 25%, transparent 0), linear-gradient(to top right, #21232c 25%, transparent 0), linear-gradient(to top right, transparent 75%, #21232c 0);
   background-size: 17% 17%;
-  background-position: 0 0, -51% -51%, 51% 0, 0px 51%;
+  background-position: 0 0, -51% -51%, 51% 0, 0 51%;
   background-repeat: repeat;
   -webkit-transition: 500ms ease-in-out;
   transition: 500ms ease-in-out;
@@ -859,7 +859,7 @@ Breakpoints
 }
 
 .main__speakers .speakersContent .speakerCard .speakerPicture .pictureHolder:hover::before {
-  background-position: 51% 0, 0 -51%, 0px 0, -51% 51%;
+  background-position: 51% 0, 0 -51%, 0 0, -51% 51%;
   -webkit-transition: 500ms ease-in-out;
   transition: 500ms ease-in-out;
 }
