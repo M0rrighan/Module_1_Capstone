@@ -40,7 +40,7 @@ This website is a design created by Cindy Shin in Behance.
 
 Have a look at the linked video for more information about the development process and some features:
 
-- https://www.loom.com/share/video_link_here
+- https://www.loom.com/share/1bc1f324b1e147708efc1f32090f9354
 
 To see how the webpage looks visit the following link:
 
