@@ -266,4 +266,176 @@ body {
 .header .mobile-menu-opened i {
   font-size: 2.75rem;
 }
+
+.main {
+  background-image: url("../../img/degustazioneInVigna.png");
+  background-repeat: repeat-x;
+  background-position-x: center;
+  background-blend-mode: overlay;
+  background-color: whitesmoke;
+  position: relative;
+  color: #3d3d3d;
+  overflow: hidden;
+}
+
+@media (min-width: 48rem) {
+  .main {
+    top: 5.725rem;
+  }
+}
+
+.main__info {
+  z-index: 15;
+  padding-top: 8.375rem;
+  padding-bottom: 8.375rem;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+
+@media (min-width: 48rem) {
+  .main__info {
+    padding-left: 14%;
+    padding-right: 14%;
+  }
+}
+
+.main__info h2 {
+  color: #ec5241;
+  font-size: 2rem;
+}
+
+@media (min-width: 48rem) {
+  .main__info h2 {
+    font-size: 2.25rem;
+  }
+}
+
+.main__info h1 {
+  background-image: url("../../img/tramonto_vigna.jpg");
+  background-position: bottom center;
+  background-size: contain;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 2.75rem;
+  font-family: 'COCOGOOSE-LETTERPRESS', Arial, sans-serif;
+}
+
+.main__info h1 span {
+  font-family: 'COCOGOOSE', Arial, sans-serif;
+}
+
+@media (min-width: 48rem) {
+  .main__info h1 {
+    font-size: 3rem;
+  }
+}
+
+.main__info h1::before {
+  content: '';
+  background-image: url(../../img/wine_set.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 10%;
+  width: 20%;
+  position: absolute;
+  top: 55px;
+  right: 0;
+  opacity: 10%;
+  z-index: 1;
+}
+
+.main__info h1:hover::before {
+  opacity: 50%;
+}
+
+.main__info .descriptionWrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.main__info .descriptionWrapper .description {
+  background-color: whitesmoke;
+  z-index: 1;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  border: 3px solid white;
+  margin-top: 1.375rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  .main__info .descriptionWrapper .description {
+    max-width: 65%;
+    margin-top: 0.75rem;
+    padding-left: 1.375rem;
+    padding-right: 1.375rem;
+    padding-top: 1.375rem;
+    padding-bottom: 1.375rem;
+  }
+}
+
+.main__info .descriptionWrapper::before {
+  content: '';
+  background-image: url(../img/decanter_hor.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 150%;
+  width: 70%;
+  position: absolute;
+  top: -75%;
+  right: -15%;
+  opacity: 20%;
+  z-index: -1;
+}
+
+@media (min-width: 48rem) {
+  .main__info .descriptionWrapper::before {
+    height: 200%;
+    width: 100%;
+    top: -100%;
+    right: -45%;
+  }
+}
+
+.main__info .descriptionWrapper::after {
+  content: '';
+  background-image: url(../../img/bottle_glass1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50%;
+  width: 50%;
+  position: absolute;
+  top: 160%;
+  right: -25%;
+  opacity: 20%;
+  z-index: -1;
+}
+
+@media (min-width: 48rem) {
+  .main__info .descriptionWrapper::after {
+    height: 150%;
+    width: 75%;
+    top: 25%;
+    right: -75%;
+  }
+}
+
+.main__info .descriptionWrapper:hover::before {
+  opacity: 100%;
+}
+
+.main__info .date {
+  font-size: 2.25rem;
+  font-family: 'COCOGOOSE', Arial, sans-serif;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.main__info .location {
+  font-size: 1rem;
+}
 /*# sourceMappingURL=main.css.map */

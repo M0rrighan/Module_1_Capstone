@@ -1,0 +1,153 @@
+.main {
+  background-image: url($mainBgImgUrl);
+  background-repeat: repeat-x;
+  background-position-x: center;
+  background-blend-mode: overlay;
+  background-color: $almostWhite;
+  position: relative;
+  color: $darkGrey;
+  overflow: hidden;
+
+  @include wider-than($mainBp) {
+    top: $mainFromTop; //calculated TopBar + Navbar
+  }
+
+  &__info {
+    z-index: 15;
+
+    @include py(8.375rem);
+    @include px($lrSpacing-mobile);
+
+    @include wider-than($mainBp) {
+      @include px($lrSpacing-desktop);
+    }
+
+    h2 {
+      color: $orange;
+      font-size: $fs_large; // 2rem
+
+      @include wider-than($mainBp) {
+        font-size: $fs_xlarge; // 2.25rem-36px
+      }
+    }
+
+    h1 {
+      background-image: url($textBgImgUrl);
+      background-position: bottom center;
+      background-size: contain;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      font-size: $fs_big; // 2.75rem-44px
+      font-family: 'COCOGOOSE-LETTERPRESS', Arial, sans-serif;
+
+      span {
+        font-family: 'COCOGOOSE', Arial, sans-serif;
+      }
+
+      @include wider-than($mainBp) {
+        font-size: $fs_xbig; // 3rem
+      }
+
+      &::before {
+        content: '';
+        background-image: url(../../img/wine_set.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 10%;
+        width: 20%;
+        position: absolute;
+        top: 55px;
+        right: 0;
+        opacity: 10%;
+        z-index: 1;
+      }
+
+      &:hover::before {
+        opacity: 50%;
+      }
+    }
+
+    .descriptionWrapper {
+      position: relative;
+      z-index: 1;
+
+      .description {
+        background-color: $almostWhite;
+        z-index: 1;
+        font-size: $fs_regular; //1rem
+        line-height: 1.5rem;
+        border: 3px solid $white;
+        margin-top: $medium; //22px
+
+        @include px (1.5rem);
+        @include py (1.5rem);
+
+        @include wider-than($mainBp) {
+          max-width: 65%;
+          margin-top: $small; //12px
+
+          @include px ($medium); //22px
+          @include py ($medium); //22px
+        }
+      }
+
+      &::before {
+        content: '';
+        background-image: url(../img/decanter_hor.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 150%;
+        width: 70%;
+        position: absolute;
+        top: -75%;
+        right: -15%;
+        opacity: 20%;
+        z-index: -1;
+
+        @include wider-than($mainBp) {
+          height: 200%;
+          width: 100%;
+          top: -100%;
+          right: -45%;
+        }
+      }
+
+      &::after {
+        content: '';
+        background-image: url(../../img/bottle_glass1.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 50%;
+        width: 50%;
+        position: absolute;
+        top: 160%;
+        right: -25%;
+        opacity: 20%;
+        z-index: -1;
+
+        @include wider-than($mainBp) {
+          height: 150%;
+          width: 75%;
+          top: 25%;
+          right: -75%;
+        }
+      }
+
+      &:hover::before {
+        opacity: 100%;
+      }
+    }
+
+    .date {
+      font-size: $fs_xlarge; //2.25rem-36px
+      font-family: 'COCOGOOSE', Arial, sans-serif;
+
+      @include py ($small); //12px
+    }
+
+    .location {
+      font-size: $fs_regular;
+    }
+  }
+}
