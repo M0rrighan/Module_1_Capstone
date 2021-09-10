@@ -1,9 +1,10 @@
 # HTML/CSS & JavaScript - Microverse Assigment: Module 1 Capstone project - Event page
 
-# Disclaimer!
+# Acknowledgments
 
-This website is a design created by Cindy Shin in Behance.
-- [` https://www.behance.net/adagio07`](https://www.behance.net/adagio07)
+- This website is a design created by Cindy Shin in Behance.
+[` https://www.behance.net/adagio07`](https://www.behance.net/adagio07)
+- ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 ## Learning objectives
 
