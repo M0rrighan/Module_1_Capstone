@@ -202,16 +202,18 @@ main_program
       }
 
       li.programItemCard {
-        background-color: #ffffff20;
-        border: 2px solid transparent;
         width: 100%;
         display: grid;
         grid-template-columns: 17% 25% 58%;
+        background-color: #ffffff20;
+        border: 2px solid transparent;
+        transition: 300ms ease-in-out;
 
         &:hover {
           border-color: $white;
           transform: scale(1.1);
           box-shadow: 0 0 1.5rem 1.5rem hsla(0, 0%, 0%, 0.35);
+          transition: 300ms ease-in-out;
         }
 
         @include wider-than($mainBp) {
@@ -264,11 +266,6 @@ main_program
       }
     }
 
-    button.contact {
-      @include my($large); // 36px
-      @include button (4rem, $large, $medium, $white, $orange, 0, unset, 0);
-    }
-
     a {
       @include my($large); // 36px
 
@@ -283,7 +280,7 @@ main_speakers
 **************************/
   &__speakers {
     flex-direction: column;
-    padding-bottom: $medium;
+    padding-bottom: $medium; //22px
     background-color: $almostWhite;
 
     @include px($lrSpacing-mobile);
@@ -293,23 +290,23 @@ main_speakers
     }    
 
     h2 {
-      font-size: $large;
-      padding-top: $xbig;
+      font-size: $fs_large; //2rem
+      padding-top: $xbig; // 3rem
       color: $darkGrey;
     }
 
     .speakersContent {
       flex-basis: 100%;
       flex-wrap: wrap;
-      gap: $large;
+      gap: $large; // 2rem
 
-      @include my($medium);      
+      @include my($medium); // 22px     
 
       @include wider-than($mainBp) {
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 1fr;
-        row-gap: $medium;
+        row-gap: $medium; // 22px
       }
 
       .speakerCard {
@@ -347,12 +344,12 @@ main_speakers
               top: -12.5%;
               left: -12.5%;
               z-index: -1;
-              background-color: white;
+              background-color: #fff;
               background-image:
-                linear-gradient(to top left, transparent 75%, $almostBlack: 0),
-                linear-gradient(to top left, $almostBlack: 25%, transparent 0),
-                linear-gradient(to top right, $almostBlack: 25%, transparent 0),  
-                linear-gradient(to top right, transparent 75%, $almostBlack: 0);
+                linear-gradient(to top left, transparent 75%, $almostBlack 0),
+                linear-gradient(to top left, $almostBlack 25%, transparent 0),
+                linear-gradient(to top right, $almostBlack 25%, transparent 0),  
+                linear-gradient(to top right, transparent 75%, $almostBlack 0);
               background-size: 25% 25%;
               background-position: 0 0, -50% -50%, 50% 0, 0px 50%;
               background-repeat: repeat;
@@ -370,45 +367,27 @@ main_speakers
         }
 
         .speakerData {
-          @include px(0.25rem);
-          
+          @include px(0.25rem); // 4px
+
           .speakerName {
-            font-size: $medium;
+            font-size: $fs_medium; // 22px
             letter-spacing: -0.0625em;
-            padding-bottom: 0.25rem;
+            padding-bottom: 0.25rem; // 4px
             color: $darkGrey;
             font-weight: bold;
           }
 
           .speakerRole {
-            font-size: $regular;
+            font-size: $fs_regular; // 1rem
             font-style: italic;
             color: $orange;
           }
 
           .speakerInfo {
-            font-size: $small;
+            font-size: $fs_xsmall; // 0.75rem-12px
             color: $darkGrey;
           }
         }
-      }
-    }
-
-    .expand {
-      width: 100%;
-
-      @include wider-than($mainBp) {
-        display: none;
-      }     
-
-      @include my($large);
-      @include button (unset, $medium, $regular, $darkGrey, transparent, 1px, $lightGrey, 0.25rem);
-
-      border-style: solid;
-
-      i.material-icons {
-        color: $orange;
-        font-weight: bold;
       }
     }
   }

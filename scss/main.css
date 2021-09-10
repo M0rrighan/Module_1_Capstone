@@ -50,6 +50,18 @@ body {
 }
 
 @use "sass:math";
+/*******************************
+Font sizes
+********************************/
+/*******************************
+Mostly used size and spacing values
+********************************/
+/*******************************
+Preset Sizes & Spacing
+********************************/
+/*******************************
+Breakpoints
+********************************/
 .upper {
   text-transform: uppercase;
 }
@@ -66,13 +78,13 @@ body {
   }
 }
 
-.flex {
+.flex, .main__speakers .speakersContent .speakerCard .speakerPicture {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.flex-jc-c {
+.flex-jc-c, .main__speakers .speakersContent .speakerCard .speakerPicture {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -118,6 +130,111 @@ body {
   height: 0.125rem;
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
+}
+
+.button {
+  cursor: pointer;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: inset 0 0 0.75rem 0.75rem rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 0 0.75rem 0.75rem rgba(0, 0, 0, 0.2);
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.menuBtn {
+  height: 2.75rem;
+  position: absolute;
+  top: 1.625rem;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 2.75rem;
+  color: inherit;
+  background-color: transparent;
+  border-width: 0;
+  border-color: unset;
+  border-radius: 0.25rem;
+}
+
+.menuBtn i {
+  font-size: 2.75rem;
+  color: #3d3d3d;
+}
+
+.button.contact {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 1.375rem;
+  color: white;
+  background-color: #ec5241;
+  border-width: 0;
+  border-color: unset;
+  border-radius: 0;
+}
+
+.button.contact:active {
+  background-color: #e32b16;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.button.program:hover {
+  color: #f5a69e;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.button.program:active {
+  color: #f17c6f;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.button.expand {
+  width: 100%;
+  border-style: solid;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: unset;
+  padding-right: unset;
+  padding-top: 1.375rem;
+  padding-bottom: 1.375rem;
+  font-size: 1rem;
+  color: #3d3d3d;
+  background-color: transparent;
+  border-width: 1px;
+  border-color: #bababa;
+  border-radius: 0.25rem;
+}
+
+.button.expand i.material-icons {
+  color: #ec5241;
+  font-weight: bold;
+}
+
+@media (min-width: 48rem) {
+  .button.expand {
+    display: none;
+  }
+}
+
+.button.expand:active {
+  border-color: #f17c6f;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 .header {
@@ -193,33 +310,6 @@ body {
   color: #ec5241;
 }
 
-.header .menuBtn, .header .openMenuBtn, .header .closeMenuBtn {
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  font-size: 2.75rem;
-  color: inherit;
-  background-color: transparent;
-  border-width: 0;
-  border-color: unset;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  position: absolute;
-  top: 1.625rem;
-}
-
-@media (min-width: 48rem) {
-  .header .menuBtn, .header .openMenuBtn, .header .closeMenuBtn {
-    display: none;
-  }
-}
-
-.header .menuBtn i, .header .openMenuBtn i, .header .closeMenuBtn i {
-  font-size: 2.75rem;
-  color: #3d3d3d;
-}
-
 .header .openMenuBtn {
   left: 1.625rem;
 }
@@ -276,6 +366,15 @@ body {
   position: relative;
   color: #3d3d3d;
   overflow: hidden;
+  /*************************
+main_info
+**************************/
+  /*************************
+main_program
+**************************/
+  /*************************
+main_speakers
+**************************/
 }
 
 @media (min-width: 48rem) {
@@ -495,13 +594,15 @@ body {
 }
 
 .main__program ul.programContent li.programItemCard {
-  background-color: #ffffff20;
-  border: 2px solid transparent;
   width: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 17% 25% 58%;
       grid-template-columns: 17% 25% 58%;
+  background-color: #ffffff20;
+  border: 2px solid transparent;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 .main__program ul.programContent li.programItemCard:hover {
@@ -510,6 +611,8 @@ body {
           transform: scale(1.1);
   -webkit-box-shadow: 0 0 1.5rem 1.5rem rgba(0, 0, 0, 0.35);
           box-shadow: 0 0 1.5rem 1.5rem rgba(0, 0, 0, 0.35);
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 @media (min-width: 48rem) {
@@ -570,27 +673,144 @@ body {
   }
 }
 
-.main__program button.contact {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  font-size: 1.375rem;
-  color: white;
-  background-color: #ec5241;
-  border-width: 0;
-  border-color: unset;
-  border-radius: 0;
-  cursor: pointer;
-}
-
 .main__program a {
   margin-top: 2rem;
   margin-bottom: 2rem;
   font-size: 1rem;
   color: whitesmoke;
   text-decoration: underline;
+}
+
+.main__speakers {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 1.375rem;
+  background-color: whitesmoke;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+
+@media (min-width: 48rem) {
+  .main__speakers {
+    padding-left: 14%;
+    padding-right: 14%;
+  }
+}
+
+.main__speakers h2 {
+  font-size: 2rem;
+  padding-top: 3rem;
+  color: #3d3d3d;
+}
+
+.main__speakers .speakersContent {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.375rem;
+  margin-bottom: 1.375rem;
+}
+
+@media (min-width: 48rem) {
+  .main__speakers .speakersContent {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    row-gap: 1.375rem;
+  }
+}
+
+.main__speakers .speakersContent .speakerCard {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 34% 66%;
+      grid-template-columns: 34% 66%;
+}
+
+@media (min-width: 48rem) {
+  .main__speakers .speakersContent .speakerCard {
+    -ms-grid-columns: 36.2% 63.8%;
+        grid-template-columns: 36.2% 63.8%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
+}
+
+.main__speakers .speakersContent .speakerCard .speakerPicture {
+  position: relative;
+  padding: 10% 0;
+}
+
+.main__speakers .speakersContent .speakerCard .speakerPicture .pictureHolder {
+  z-index: 1;
+  position: relative;
+  width: 80%;
+}
+
+.main__speakers .speakersContent .speakerCard .speakerPicture .pictureHolder .picture {
+  width: 100%;
+  height: auto;
+}
+
+.main__speakers .speakersContent .speakerCard .speakerPicture .pictureHolder::before {
+  content: '';
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: -12.5%;
+  left: -12.5%;
+  z-index: -1;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, right bottom, left top, color-stop(75%, transparent), color-stop(0, #21232c)), -webkit-gradient(linear, right bottom, left top, color-stop(25%, #21232c), color-stop(0, transparent)), -webkit-gradient(linear, left bottom, right top, color-stop(25%, #21232c), color-stop(0, transparent)), -webkit-gradient(linear, left bottom, right top, color-stop(75%, transparent), color-stop(0, #21232c));
+  background-image: linear-gradient(to top left, transparent 75%, #21232c 0), linear-gradient(to top left, #21232c 25%, transparent 0), linear-gradient(to top right, #21232c 25%, transparent 0), linear-gradient(to top right, transparent 75%, #21232c 0);
+  background-size: 25% 25%;
+  background-position: 0 0, -50% -50%, 50% 0, 0px 50%;
+  background-repeat: repeat;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+}
+
+@media (min-width: 48rem) {
+  .main__speakers .speakersContent .speakerCard .speakerPicture .pictureHolder::before {
+    opacity: 50%;
+  }
+}
+
+.main__speakers .speakersContent .speakerCard .speakerPicture .pictureHolder:hover::before {
+  background-position: 50% 0, 0 -50%, 0px 0, -50% 50%;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+}
+
+.main__speakers .speakersContent .speakerCard .speakerData {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.main__speakers .speakersContent .speakerCard .speakerData .speakerName {
+  font-size: 1.375rem;
+  letter-spacing: -0.0625em;
+  padding-bottom: 0.25rem;
+  color: #3d3d3d;
+  font-weight: bold;
+}
+
+.main__speakers .speakersContent .speakerCard .speakerData .speakerRole {
+  font-size: 1rem;
+  font-style: italic;
+  color: #ec5241;
+}
+
+.main__speakers .speakersContent .speakerCard .speakerData .speakerInfo {
+  font-size: 0.75rem;
+  color: #3d3d3d;
 }
 /*# sourceMappingURL=main.css.map */

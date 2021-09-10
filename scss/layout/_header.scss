@@ -62,31 +62,11 @@
     }
   }
 
-  .menuBtn {
-    @include wider-than($mainBp) {
-      display: none;
-    }
-
-    @include button (0, 0,  $big, inherit, transparent, 0, unset, 0.25rem);
-
-    position: absolute;
-    top: $menuTopLeftSpace;
-
-    i {
-      font-size: $fs_big; // 44px
-      color: $darkGrey;
-    }
-  }
-
   .openMenuBtn {
-    @extend .menuBtn;
-
     left: $menuTopLeftSpace;
   }
 
   .closeMenuBtn {
-    @extend .menuBtn;
-
     right: $menuTopLeftSpace;
   }
 

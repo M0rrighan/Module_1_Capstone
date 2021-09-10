@@ -33,7 +33,7 @@
 // button attributes:
 //padding-x, padding-y, font-size, color, background-color,
 //border-width, border-color, border-radius
-@mixin button ($px, $py, $fs, $fcol, $bgCol, $bdWidth, $bdCol, $bdRad) {
+@mixin buttonGenerator ($px, $py, $fs, $fcol, $bgCol, $bdWidth, $bdCol, $bdRad) {
   @include px($px);
   @include py($py);
 
@@ -43,5 +43,4 @@
   border-width: $bdWidth;
   border-color: $bdCol;
   border-radius: $bdRad;
-  cursor: pointer;
 }
