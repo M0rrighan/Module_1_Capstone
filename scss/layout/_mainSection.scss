@@ -12,6 +12,9 @@
     top: $mainFromTop; //calculated TopBar + Navbar
   }
 
+/*************************
+main_info
+**************************/
   &__info {
     z-index: 15;
 
@@ -151,6 +154,9 @@
     }
   }
 
+/*************************
+main_program
+**************************/
   &__program {
     flex-direction: column;
     padding-bottom: $medium; // 22px
@@ -269,6 +275,141 @@
       font-size: $fs_regular;
       color: $almostWhite;
       text-decoration: underline;
+    }
+  }
+
+/*************************
+main_speakers
+**************************/
+  &__speakers {
+    flex-direction: column;
+    padding-bottom: $medium;
+    background-color: $almostWhite;
+
+    @include px($lrSpacing-mobile);
+
+    @include wider-than($mainBp) {
+      @include px($lrSpacing-desktop);
+    }    
+
+    h2 {
+      font-size: $large;
+      padding-top: $xbig;
+      color: $darkGrey;
+    }
+
+    .speakersContent {
+      flex-basis: 100%;
+      flex-wrap: wrap;
+      gap: $large;
+
+      @include my($medium);      
+
+      @include wider-than($mainBp) {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr;
+        row-gap: $medium;
+      }
+
+      .speakerCard {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 34% 66%;
+
+        @include wider-than($mainBp) {
+          grid-template-columns: 36.2% 63.8%;
+          grid-template-rows: auto;
+        }
+
+        .speakerPicture {
+          position: relative;
+          padding: 10% 0;
+
+          @extend .flex;
+          @extend .flex-jc-c;
+
+          .pictureHolder {
+            z-index: 1;
+            position: relative;
+            width: 80%;
+
+            .picture {
+              width: 100%;
+              height: auto;
+            }
+
+            &::before {
+              content: '';
+              width: 50%;
+              height: 50%;
+              position: absolute;
+              top: -12.5%;
+              left: -12.5%;
+              z-index: -1;
+              background-color: white;
+              background-image:
+                linear-gradient(to top left, transparent 75%, $almostBlack: 0),
+                linear-gradient(to top left, $almostBlack: 25%, transparent 0),
+                linear-gradient(to top right, $almostBlack: 25%, transparent 0),  
+                linear-gradient(to top right, transparent 75%, $almostBlack: 0);
+              background-size: 25% 25%;
+              background-position: 0 0, -50% -50%, 50% 0, 0px 50%;
+              background-repeat: repeat;
+              transition: 500ms ease-in-out;
+              @include wider-than($mainBp) {
+                opacity: 50%;
+              }
+            }
+
+            &:hover::before {
+              background-position: 50% 0, 0 -50%, 0px 0, -50% 50%;
+              transition: 500ms ease-in-out;
+            }
+          }
+        }
+
+        .speakerData {
+          @include px(0.25rem);
+          
+          .speakerName {
+            font-size: $medium;
+            letter-spacing: -0.0625em;
+            padding-bottom: 0.25rem;
+            color: $darkGrey;
+            font-weight: bold;
+          }
+
+          .speakerRole {
+            font-size: $regular;
+            font-style: italic;
+            color: $orange;
+          }
+
+          .speakerInfo {
+            font-size: $small;
+            color: $darkGrey;
+          }
+        }
+      }
+    }
+
+    .expand {
+      width: 100%;
+
+      @include wider-than($mainBp) {
+        display: none;
+      }     
+
+      @include my($large);
+      @include button (unset, $medium, $regular, $darkGrey, transparent, 1px, $lightGrey, 0.25rem);
+
+      border-style: solid;
+
+      i.material-icons {
+        color: $orange;
+        font-weight: bold;
+      }
     }
   }
 }
