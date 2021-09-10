@@ -164,16 +164,16 @@
     background-color: $darkBlue;
     background-size: 25px 25px;
     background-image:
-    linear-gradient(to left, transparent 70%, $darkBlue 0, $darkBlue 100%),
-    linear-gradient(to top, transparent 70%, $darkBlue 0, $darkBlue 100%),
-    linear-gradient(to top right, transparent 5%, $almostBlack 0, $almostBlack 13%, transparent 0, transparent 55%, $almostBlack 0, $almostBlack 63%, transparent 0),
-    linear-gradient(to bottom right, transparent 5%, $almostBlack 0, $almostBlack 13%, transparent 0, transparent 55%, $almostBlack 0, $almostBlack 63%, transparent 0);
+      linear-gradient(to left, transparent 70%, $darkBlue 0, $darkBlue 100%),
+      linear-gradient(to top, transparent 70%, $darkBlue 0, $darkBlue 100%),
+      linear-gradient(to top right, transparent 5%, $almostBlack 0, $almostBlack 13%, transparent 0, transparent 55%, $almostBlack 0, $almostBlack 63%, transparent 0),
+      linear-gradient(to bottom right, transparent 5%, $almostBlack 0, $almostBlack 13%, transparent 0, transparent 55%, $almostBlack 0, $almostBlack 63%, transparent 0);
     background-position: -0.5px 0, 0 0, 7.5px 0, 7.5px 7.5px;
     background-repeat: repeat;
     transition: 900ms ease-in;
 
     &:hover {
-      background-position: 24.5px 0px, 0px -24.5px, 7.5px 0, 7.5px 7.5px;
+      background-position: 24.5px 0, 0 -24.5px, 7.5px 0, 7.5px 7.5px;
       transition: 900ms ease-in;
     }
 
@@ -205,7 +205,7 @@
         &:hover {
           border-color: $white;
           transform: scale(1.1);
-          box-shadow: 0px 0rem 1.5rem 1.5rem hsla(0, 0%, 0%, 0.35);        
+          box-shadow: 0 0 1.5rem 1.5rem hsla(0, 0%, 0%, 0.35);
         }
 
         @include wider-than($mainBp) {
@@ -237,8 +237,8 @@
           margin-left: unset;
 
           @include wider-than($mainBp) {
-             font-size: $small; // 0.875rem-14px;
-             margin-left: auto;
+            font-size: $small; // 0.875rem-14px;
+            margin-left: auto;
           }
         }
 

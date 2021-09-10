@@ -465,7 +465,7 @@ body {
 }
 
 .main__program:hover {
-  background-position: 24.5px 0px, 0px -24.5px, 7.5px 0, 7.5px 7.5px;
+  background-position: 24.5px 0, 0 -24.5px, 7.5px 0, 7.5px 7.5px;
   -webkit-transition: 900ms ease-in;
   transition: 900ms ease-in;
 }
@@ -508,8 +508,8 @@ body {
   border-color: white;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  -webkit-box-shadow: 0px 0rem 1.5rem 1.5rem rgba(0, 0, 0, 0.35);
-          box-shadow: 0px 0rem 1.5rem 1.5rem rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0 0 1.5rem 1.5rem rgba(0, 0, 0, 0.35);
+          box-shadow: 0 0 1.5rem 1.5rem rgba(0, 0, 0, 0.35);
 }
 
 @media (min-width: 48rem) {
