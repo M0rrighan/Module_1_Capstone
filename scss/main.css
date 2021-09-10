@@ -59,6 +59,9 @@ Mostly used size and spacing values
 /*******************************
 Preset Sizes & Spacing
 ********************************/
+/* Desktop mainSection distance from top:
+ TopBar (2 * 0.3625rem top and bottom padding, 1 rem socials height)
+ NavBar (2 * 0.75rem top and bottom margin, 2.5 rem logo height) */
 /*******************************
 Breakpoints
 ********************************/
@@ -237,7 +240,7 @@ Breakpoints
   transition: 300ms ease-in-out;
 }
 
-.header {
+.header, #about .header {
   position: fixed;
   top: 0;
   left: 0;
@@ -246,7 +249,7 @@ Breakpoints
   z-index: 5;
 }
 
-.header .topBar {
+.header .topBar, #about .header .topBar {
   display: none;
   padding-left: 14%;
   padding-right: 14%;
@@ -259,19 +262,19 @@ Breakpoints
 }
 
 @media (min-width: 48rem) {
-  .header .topBar {
+  .header .topBar, #about .header .topBar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
-.header .topBar .socials {
+.header .topBar .socials, #about .header .topBar .socials {
   height: 1rem;
   color: white;
 }
 
-.header nav {
+.header nav, #about .header nav {
   display: none;
   -webkit-box-shadow: 0 0.25rem 2rem 0.5rem rgba(0, 0, 0, 0.3);
           box-shadow: 0 0.25rem 2rem 0.5rem rgba(0, 0, 0, 0.3);
@@ -280,45 +283,45 @@ Breakpoints
 }
 
 @media (min-width: 48rem) {
-  .header nav {
+  .header nav, #about .header nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
-.header nav .logoPlace {
+.header nav .logoPlace, #about .header nav .logoPlace {
   position: relative;
   height: 3rem;
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
 }
 
-.header nav .logoPlace .eventLogo {
+.header nav .logoPlace .eventLogo, #about .header nav .logoPlace .eventLogo {
   height: 100%;
 }
 
-.header nav .navlinks > a {
+.header nav .navlinks > a, #about .header nav .navlinks > a {
   color: #bababa;
 }
 
-.header nav .navlinks > a:not(:first-child) {
+.header nav .navlinks > a:not(:first-child), #about .header nav .navlinks > a:not(:first-child) {
   margin-left: 3rem;
 }
 
-.header nav .navlinks > a:hover {
+.header nav .navlinks > a:hover, #about .header nav .navlinks > a:hover {
   color: #ec5241;
 }
 
-.header .openMenuBtn {
+.header .openMenuBtn, #about .header .openMenuBtn {
   left: 1.625rem;
 }
 
-.header .closeMenuBtn {
+.header .closeMenuBtn, #about .header .closeMenuBtn {
   right: 1.625rem;
 }
 
-.header .mobile-menu {
+.header .mobile-menu, #about .header .mobile-menu {
   position: absolute;
   top: 0;
   height: 100vh;
@@ -341,20 +344,30 @@ Breakpoints
   background-repeat: repeat;
 }
 
-.header .mobile-menu-closed {
+.header .mobile-menu-closed, #about .header .mobile-menu-closed {
   left: -105vw;
   -webkit-transition: 300ms ease-in;
   transition: 300ms ease-in;
 }
 
-.header .mobile-menu-opened {
+.header .mobile-menu-opened, #about .header .mobile-menu-opened {
   left: 0;
   -webkit-transition: 300ms ease-in;
   transition: 300ms ease-in;
 }
 
-.header .mobile-menu-opened i {
+.header .mobile-menu-opened i, #about .header .mobile-menu-opened i {
   font-size: 2.75rem;
+}
+
+#about .header .topBar {
+  padding-left: 16.8%;
+  padding-right: 4.7%;
+}
+
+#about .header nav {
+  padding-left: 16.8%;
+  padding-right: 4.7%;
 }
 
 .main {

@@ -43,15 +43,19 @@ $logoImgH: $xbig; //48px
 $topBarSpacingTb: 0.3625rem; //5.8px
 $navBarSpacingTb: $small; //12px
 $menuTopLeftSpace: 1.625rem; //26px
-// main page paddings:
+// homepage page paddings/margins:
 $lrSpacing-desktop: 14%;
 $lrSpacing-mobile: 2.5%;
+// homepage page paddings/margins:
+$lSpace-header-About: 16.8%;
+$rSpace-header-About: 4.7%;
 $lSpace-desk-About: 21.8%;
 $rSpace-desk-About: 9.2%;
 $lrSpacing-mobile-about: 5%;
-// Desktop mainSection distance from top:
-// TopBar (2 * 0.3625rem top and bottom padding, 1 rem socials height)
-// NavBar (2 * 0.75rem top and bottom margin, 2.5 rem logo height)
+
+/* Desktop mainSection distance from top:
+ TopBar (2 * 0.3625rem top and bottom padding, 1 rem socials height)
+ NavBar (2 * 0.75rem top and bottom margin, 2.5 rem logo height) */
 $mainFromTop: ($socialIconH + $logoImgH + (2 * $topBarSpacingTb) + (2 * $navBarSpacingTb));
 
 /*******************************

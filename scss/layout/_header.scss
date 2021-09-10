@@ -125,3 +125,17 @@
     }
   }
 }
+
+#about .header {
+  @extend .header;
+
+  .topBar {
+    padding-left: $lSpace-header-About;
+    padding-right: $rSpace-header-About;
+  }
+
+  nav {
+    padding-left: $lSpace-header-About;
+    padding-right: $rSpace-header-About;
+  }
+}
