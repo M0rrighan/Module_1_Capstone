@@ -59,8 +59,9 @@
         position: absolute;
         top: 55px;
         right: 0;
-        opacity: 10%;
         z-index: 1;
+        animation: changeOpacity_rotate 1000ms ease-in-out;
+        animation-fill-mode: forwards;
       }
 
       &:hover::before {
@@ -102,14 +103,15 @@
         position: absolute;
         top: -75%;
         right: -15%;
-        opacity: 20%;
         z-index: -1;
+        animation: changeOpacity_rotate 1000ms ease-in-out;
+        animation-fill-mode: forwards;
 
         @include wider-than($mainBp) {
           height: 200%;
           width: 100%;
           top: -100%;
-          right: -45%;
+          right: 18%;
         }
       }
 
@@ -122,15 +124,16 @@
         width: 50%;
         position: absolute;
         top: 160%;
-        right: -25%;
-        opacity: 20%;
+        right: 35%;
         z-index: -1;
+        animation: changeOpacity_rotate 1000ms ease-in-out;
+        animation-fill-mode: forwards;
 
         @include wider-than($mainBp) {
           height: 150%;
           width: 75%;
           top: 25%;
-          right: -75%;
+          right: 0%;
         }
       }
 
@@ -341,8 +344,8 @@
                 linear-gradient(to top left, $almostBlack 25%, transparent 0),
                 linear-gradient(to top right, $almostBlack 25%, transparent 0),  
                 linear-gradient(to top right, transparent 75%, $almostBlack 0);
-              background-size: 25% 25%;
-              background-position: 0 0, -50% -50%, 50% 0, 0px 50%;
+              background-size: 17% 17%;
+              background-position: 0 0, -51% -51%, 51% 0, 0px 51%;
               background-repeat: repeat;
               transition: 500ms ease-in-out;
               @include wider-than($mainBp) {
@@ -351,7 +354,7 @@
             }
 
             &:hover::before {
-              background-position: 50% 0, 0 -50%, 0px 0, -50% 50%;
+              background-position: 51% 0, 0 -51%, 0px 0, -51% 51%;
               transition: 500ms ease-in-out;
             }
           }
@@ -411,7 +414,6 @@
 
     &::before {
       content: '';
-      background-image: url($mainBgSmall_1);
       transform: scaleX(-1);
       top: 55px;
       left: 0;
@@ -441,7 +443,6 @@
 
     &::before {
       content: '';
-      // background-image: url($mainBgSmall_2);
       transform: scaleX(-1);
       top: -75%;
       right: 50%;
@@ -449,6 +450,17 @@
       @include wider-than($mainBp) {
         top: -100%;
         right: 75%;
+      }
+    }
+
+    &::after {
+      top: 126%;
+      right: 89%;
+      @include wider-than($mainBp) {
+        height: 74%;
+        width: 75%;
+        top: 79%;
+        right: -4%;
       }
     }
   }

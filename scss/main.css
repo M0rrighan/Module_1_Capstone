@@ -111,6 +111,56 @@ Breakpoints
           align-items: center;
 }
 
+@-webkit-keyframes changeOpacity_rotate {
+  0% {
+    -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+    opacity: 100%;
+  }
+  50% {
+    -webkit-transform: rotateY(70deg);
+            transform: rotateY(70deg);
+    opacity: 90%;
+  }
+  90% {
+    opacity: 80%;
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+    opacity: 15%;
+  }
+}
+
+@keyframes changeOpacity_rotate {
+  0% {
+    -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+    opacity: 100%;
+  }
+  50% {
+    -webkit-transform: rotateY(70deg);
+            transform: rotateY(70deg);
+    opacity: 90%;
+  }
+  90% {
+    opacity: 80%;
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+    opacity: 15%;
+  }
+}
+
 .separator {
   background-color: #ec5241;
   width: 3rem;
@@ -455,8 +505,11 @@ Breakpoints
   position: absolute;
   top: 55px;
   right: 0;
-  opacity: 10%;
   z-index: 1;
+  -webkit-animation: changeOpacity_rotate 1000ms ease-in-out;
+          animation: changeOpacity_rotate 1000ms ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .main__info h1:hover::before {
@@ -502,8 +555,11 @@ Breakpoints
   position: absolute;
   top: -75%;
   right: -15%;
-  opacity: 20%;
   z-index: -1;
+  -webkit-animation: changeOpacity_rotate 1000ms ease-in-out;
+          animation: changeOpacity_rotate 1000ms ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @media (min-width: 48rem) {
@@ -511,22 +567,25 @@ Breakpoints
     height: 200%;
     width: 100%;
     top: -100%;
-    right: -45%;
+    right: 18%;
   }
 }
 
 .main__info .descriptionWrapper::after {
   content: '';
-  background-image: url("(../../img/bottle_glass1.png");
+  background-image: url("../../img/bottle_glass1.png");
   background-size: contain;
   background-repeat: no-repeat;
   height: 50%;
   width: 50%;
   position: absolute;
   top: 160%;
-  right: -25%;
-  opacity: 20%;
+  right: 35%;
   z-index: -1;
+  -webkit-animation: changeOpacity_rotate 1000ms ease-in-out;
+          animation: changeOpacity_rotate 1000ms ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @media (min-width: 48rem) {
@@ -534,7 +593,7 @@ Breakpoints
     height: 150%;
     width: 75%;
     top: 25%;
-    right: -75%;
+    right: 0%;
   }
 }
 
@@ -786,8 +845,8 @@ Breakpoints
   background-color: #fff;
   background-image: -webkit-gradient(linear, right bottom, left top, color-stop(75%, transparent), color-stop(0, #21232c)), -webkit-gradient(linear, right bottom, left top, color-stop(25%, #21232c), color-stop(0, transparent)), -webkit-gradient(linear, left bottom, right top, color-stop(25%, #21232c), color-stop(0, transparent)), -webkit-gradient(linear, left bottom, right top, color-stop(75%, transparent), color-stop(0, #21232c));
   background-image: linear-gradient(to top left, transparent 75%, #21232c 0), linear-gradient(to top left, #21232c 25%, transparent 0), linear-gradient(to top right, #21232c 25%, transparent 0), linear-gradient(to top right, transparent 75%, #21232c 0);
-  background-size: 25% 25%;
-  background-position: 0 0, -50% -50%, 50% 0, 0px 50%;
+  background-size: 17% 17%;
+  background-position: 0 0, -51% -51%, 51% 0, 0px 51%;
   background-repeat: repeat;
   -webkit-transition: 500ms ease-in-out;
   transition: 500ms ease-in-out;
@@ -800,7 +859,7 @@ Breakpoints
 }
 
 .main__speakers .speakersContent .speakerCard .speakerPicture .pictureHolder:hover::before {
-  background-position: 50% 0, 0 -50%, 0px 0, -50% 50%;
+  background-position: 51% 0, 0 -51%, 0px 0, -51% 51%;
   -webkit-transition: 500ms ease-in-out;
   transition: 500ms ease-in-out;
 }
@@ -858,7 +917,6 @@ Breakpoints
 
 #about .main h1::before {
   content: '';
-  background-image: url("../../img/wine_set.png");
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
   top: 55px;
@@ -901,6 +959,20 @@ Breakpoints
   #about .main .descriptionWrapper::before {
     top: -100%;
     right: 75%;
+  }
+}
+
+#about .main .descriptionWrapper::after {
+  top: 126%;
+  right: 89%;
+}
+
+@media (min-width: 48rem) {
+  #about .main .descriptionWrapper::after {
+    height: 74%;
+    width: 75%;
+    top: 79%;
+    right: -4%;
   }
 }
 
