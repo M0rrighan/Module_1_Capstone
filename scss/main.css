@@ -370,7 +370,7 @@ Breakpoints
   padding-right: 4.7%;
 }
 
-.main {
+.main, #about .main {
   background-image: url("../../img/degustazioneInVigna.png");
   background-repeat: repeat-x;
   background-position-x: center;
@@ -379,19 +379,10 @@ Breakpoints
   position: relative;
   color: #3d3d3d;
   overflow: hidden;
-  /*************************
-main_info
-**************************/
-  /*************************
-main_program
-**************************/
-  /*************************
-main_speakers
-**************************/
 }
 
 @media (min-width: 48rem) {
-  .main {
+  .main, #about .main {
     top: 6.225rem;
   }
 }
@@ -445,7 +436,7 @@ main_speakers
 
 .main__info h1::before {
   content: '';
-  background-image: url(../../img/wine_set.png);
+  background-image: url("../../img/wine_set.png");
   background-size: contain;
   background-repeat: no-repeat;
   height: 10%;
@@ -492,7 +483,7 @@ main_speakers
 
 .main__info .descriptionWrapper::before {
   content: '';
-  background-image: url(../img/decanter_hor.png);
+  background-image: url("../../img/decanter_hor.png");
   background-size: contain;
   background-repeat: no-repeat;
   height: 150%;
@@ -515,7 +506,7 @@ main_speakers
 
 .main__info .descriptionWrapper::after {
   content: '';
-  background-image: url(../../img/bottle_glass1.png);
+  background-image: url("(../../img/bottle_glass1.png");
   background-size: contain;
   background-repeat: no-repeat;
   height: 50%;
@@ -825,6 +816,226 @@ main_speakers
 .main__speakers .speakersContent .speakerCard .speakerData .speakerInfo {
   font-size: 0.75rem;
   color: #3d3d3d;
+}
+
+#about .main {
+  text-align: center;
+  line-height: 1.5;
+  background-image: none;
+}
+
+#about .main__info {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 7.5rem;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 48rem) {
+  #about .main__info {
+    padding-left: 21.8%;
+    padding-right: 9.2%;
+    padding-bottom: 4.875rem;
+  }
+}
+
+#about .main h1 {
+  background-image: none;
+  color: #ec5241;
+  -webkit-text-fill-color: unset;
+}
+
+#about .main h1::before {
+  content: '';
+  background-image: url("../../img/wine_set.png");
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  top: 55px;
+  left: 0;
+}
+
+#about .main .separatorMedium {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#about .main .descriptionWrapper .description {
+  background-color: white;
+  border: 3px solid #ececec;
+  margin-top: 2.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  #about .main .descriptionWrapper .description {
+    max-width: 100%;
+    margin-top: 1.5rem;
+    padding-left: 3.25rem;
+    padding-right: 3.25rem;
+  }
+}
+
+#about .main .descriptionWrapper::before {
+  content: '';
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  top: -75%;
+  right: 50%;
+}
+
+@media (min-width: 48rem) {
+  #about .main .descriptionWrapper::before {
+    top: -100%;
+    right: 75%;
+  }
+}
+
+#about .main .location {
+  margin-top: 1.75rem;
+  margin-bottom: 2.375rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 48rem) {
+  #about .main .location {
+    margin-top: 2.375rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+#about .main .location a {
+  text-decoration: underline;
+}
+
+#about .main__middle, #about .main__bottom {
+  background-color: white;
+  border-bottom: 1px solid #ececec;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+@media (min-width: 48rem) {
+  #about .main__middle, #about .main__bottom {
+    padding-left: 21.8%;
+    padding-right: 9.2%;
+    padding-top: 2.875rem;
+    padding-bottom: 2.875rem;
+  }
+}
+
+#about .main__middle h3, #about .main__bottom h3 {
+  font-size: 1.625rem;
+}
+
+#about .main__middle h3 span, #about .main__bottom h3 span {
+  display: block;
+}
+
+@media (min-width: 48rem) {
+  #about .main__middle h3 span, #about .main__bottom h3 span {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 48rem) {
+  #about .main__middle p, #about .main__bottom p {
+    padding-left: 4.75rem;
+    padding-right: 4.75rem;
+  }
+}
+
+#about .main .logoPlaceHolder {
+  border: 1px solid #ececec;
+  width: 100%;
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+@media (min-width: 48rem) {
+  #about .main .logoPlaceHolder {
+    width: 60%;
+    margin-top: 2.625rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+#about .main .logoPlaceHolder img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  width: 100%;
+}
+
+#about .main .pastEvents {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 3.25rem;
+}
+
+@media (min-width: 48rem) {
+  #about .main .pastEvents {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+#about .main .pastEventBtn {
+  width: 100%;
+  color: white;
+  background-color: #ec5241;
+  border: none;
+  border-radius: 0;
+  padding-top: 4.75em;
+  padding-bottom: 4.5em;
+}
+
+@media (min-width: 48rem) {
+  #about .main .pastEventBtn {
+    width: 50%;
+  }
+}
+
+#about .main .pastEventBtn span {
+  display: block;
+}
+
+#about .main .pastEventBtn .btnTitle {
+  font-weight: bold;
+  font-size: 1.625rem;
+  line-height: 1.5;
+}
+
+#about .main .pastEventBtn .btnTxt {
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+#about .main .ev1 {
+  background-image: url("../../img/cena_in_vigna1.jpg");
+  background-position: center center;
+  background-size: auto;
+  background-blend-mode: overlay;
+}
+
+#about .main .ev2 {
+  background-image: url("../../img/cena_in_vigna2.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: overlay;
 }
 
 .footer {
