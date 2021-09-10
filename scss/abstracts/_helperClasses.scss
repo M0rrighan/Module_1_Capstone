@@ -1,0 +1,36 @@
+.upper {
+  text-transform: uppercase;
+}
+
+.desktop-invisible {
+  @include wider-than($mainBp) {
+    display: none;
+  }
+}
+
+.mobile-invisible {
+  @include wide-less-than($mainBpLess) {
+    display: none;
+  }
+}
+
+//Flexbox helper classes
+.flex {
+  display: flex;
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-jc-end {
+    justify-content: flex-end;
+  }
+
+  &-jc-spb {
+    justify-content: space-between;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}

@@ -1,0 +1,47 @@
+@mixin px($space) {
+  padding-left: $space;
+  padding-right: $space;
+}
+
+@mixin py($space) {
+  padding-top: $space;
+  padding-bottom: $space;
+}
+
+@mixin mx($space) {
+  margin-left: $space;
+  margin-right: $space;
+}
+
+@mixin my($space) {
+  margin-top: $space;
+  margin-bottom: $space;
+}
+
+@mixin wider-than($bpSize) {
+  @media (min-width: $bpSize) {
+    @content;
+  }
+}
+
+@mixin wide-less-than($bpSize) {
+  @media (max-width: $bpSize) {
+    @content;
+  }
+}
+
+// button attributes:
+//padding-x, padding-y, font-size, color, background-color,
+//border-width, border-color, border-radius
+@mixin button ($px, $py, $fs, $fcol, $bgCol, $bdWidth, $bdCol, $bdRad) {
+  @include px($px);
+  @include py($py);
+
+  font-size: $fs;
+  color: $fcol;
+  background-color: $bgCol;
+  border-width: $bdWidth;
+  border-color: $bdCol;
+  border-radius: $bdRad;
+  cursor: pointer;
+}
