@@ -122,6 +122,21 @@
       i {
         font-size: $fs_big; // 44px
       }
+
+      a {
+        width: 80%;
+        font-size: $fs_xbig;
+        font-weight: bold;
+        color: $darkGrey;
+        background-color: #ffffff20;
+        border: 2px solid $almostWhite;
+
+        @extend .button;
+        @extend .flex;
+        @extend .flex-jc-c;
+
+        @include py($medium);
+      }
     }
   }
 }
