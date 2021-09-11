@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./scss/main.css">
+  <title>WTV - Wine Tasting (out in the) Vineyard</title>
+</head>
+
+<body>
+  <header class="header">
+
+    <!-- top bar: hidden for mobile -->
+    <article class="topBar flex-jc-end">
+      <a href="#">
+        <img class="socials" src="img/facebook.svg" alt="facebook logo icon" />
+      </a>
+      <a href="#">
+        <img class="socials" src="img/twitter.svg" alt="twitter logo icon" />
+      </a>
+      <a href="#">English</a>
+      <a href="#">My Page</a>
+      <a href="#">Logout</a>
+    </article>
+
+    <!-- nav bar: hidden for mobile -->
+    <nav class="flex-jc-spb flex-ai-c mobile-invisible">
+      <div class="logoPlace mobile-invisible">
+        <a href="index.html">
+          <img src="img/eventLogo.png" class="eventLogo mobile-invisible" alt="Wine Tasting Association logo">
+        </a>
+      </div>
+
+      <div class="navlinks flex mobile-invisible">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+      </div>
+    </nav>
+
+    <a class="button menuBtn openMenuBtn desktop-invisible">
+      <i class="material-icons">menu</i>
+    </a>
+
+    <!-- mobile menu, hidden for desktop -->
+    <div class="mobile-menu mobile-menu-closed flex-jc-c flex-ai-c desktop-invisible">
+      <button type="button" class="button menuBtn closeMenuBtn desktop-invisible">
+        <i class="material-icons">close</i>
+      </button>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="main__info">
+      <h2 class="greetings">"Hello Wine lovers!"</h2>
+      <h1 class="upper" data-darkBg="true">wine tasting <br> in the vineyard <br> <span>2021</span></h1>
+      <div class="descriptionWrapper">
+        <div class="description">A different way to approach wine and to discover lands,
+          scents and stories of winemakers. An excellent opportunity to taste local
+          delicacies selected to match the various wines.
+        </div>
+      </div>
+      <div class="date">
+        2021.09.15 (Wed)
+      </div>
+      <div class="location">
+        @ La Ficaia - Mombaruzzo fraz. Casalotto - Piedmont, Italy
+      </div>
+    </section>
+
+    <section class="main__program flex flex-ai-c" data-darkBg="true">
+      <h2 class="sectionTitle">Main Program</h2>
+      <p class="separator"></p>
+      <ul class="programContent flex">
+        <li class="programItemCard">
+          <div class="programCardIcon">
+            <i class="material-icons">
+              brunch_dining
+            </i>
+          </div>
+          <div class="programCardTitle">
+            Welcome Drinks
+          </div>
+          <div class="programCardDescription">
+            Welcoming drinks open bar: selected fizzy Aperi - wines accompanied
+            by a wide selection of locally produced gourmet appetizers
+          </div>
+        </li>
+
+        <li class="programItemCard">
+          <div class="programCardIcon">
+            <i class="material-icons">record_voice_over</i>
+          </div>
+          <div class="programCardTitle">
+            Lecture
+          </div>
+          <div class="programCardDescription">
+            Esteemed oenologists explaining the various properties of wine, guiding
+            in the choice of the right wine glass and food to match...
+          </div>
+        </li>
+
+        <li class="programItemCard">
+          <div class="programCardIcon">
+            <i class="material-icons">dinner_dining</i>
+          </div>
+          <div class="programCardTitle">
+            Dinner
+          </div>
+          <div class="programCardDescription">
+            Seasonal delicacies produced locally: - entree' of cured meats and cheeses,
+            - first course (pasta), and - main course of choice.
+          </div>
+        </li>
+
+        <li class="programItemCard">
+          <div class="programCardIcon">
+            <i class="material-icons">music_note</i>
+          </div>
+          <div class="programCardTitle">
+            Live Music
+          </div>
+          <div class="programCardDescription">
+            Live band entertaining with soft jazz. A perfect match to make your experience
+            even more sensational.
+          </div>
+        </li>
+
+        <li class="programItemCard">
+          <div class="programCardIcon">
+            <i class="material-icons">cake</i>
+          </div>
+          <div class="programCardTitle">
+            Dessert
+          </div>
+          <div class="programCardDescription">
+            To end the evening on a sweet note: Tastes of delicious light
+            pastries along with carefully selected dessert wines.
+          </div>
+        </li>
+      </ul>
+      <button type="button" class="button contact desktop-invisible">
+        Book your spot
+      </button>
+      <a href="#" class="button program upper mobile-invisible">See the whole program</a>
+    </section>
+
+    <section class="main__speakers flex flex-ai-c">
+      <h2>Experts</h2>
+      <p class="separator"></p>
+      <ul class="speakersContent flex">
+      </ul>
+      <button type="button" class="button expand upper flex flex-jc-c flex-ai-c">
+        More
+        <i class="material-icons">expand_more</i>
+      </button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="sponsors flex flex-ai-c">
+      <h2>Partner</h2>
+      <p class="separatorMedium"></p>
+      <div class="partnersLogoContainer flex flex-jc-c flex-ai-c">
+        <img src="." class="logoPartner1" alt="Partner 1 logo">
+        <img src="." class="logoPartner2" alt="Partner 2 logo">
+        <img src="." class="logoPartner3" alt="Partner 3 logo">
+        <img src="." class="logoPartner4" alt="Partner 4 logo">
+        <img src="." class="logoPartner5" alt="Partner 5 logo">
+      </div>
+    </div>
+    <div class="copyrightsContainer flex">
+      <div class="logoPlaceholder">
+        <img src="img/laFicaia.png" class="hostLogo" alt="Event Host logo">
+      </div>
+      <div class="copyrights flex flex-jc-c">
+        <p>2021 Wine Tasting Association</p>
+        <p>This is a template web site. The information inside are invented.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/menu.js"></script>
+  <script src="js/speakers.js"></script>
+</body>
+
+</html>

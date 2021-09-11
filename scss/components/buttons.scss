@@ -1,0 +1,66 @@
+.button {
+  cursor: pointer;
+  transform: scale(1);
+  transition: 300ms ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  box-shadow: inset 0 0 0.75rem 0.75rem hsla(0, 0%, 0%, 0.2);
+  transition: 300ms ease-in-out;
+}
+
+.menuBtn {
+  height: $big; // 44px
+  position: absolute;
+  top: $menuTopLeftSpace;
+
+  @include buttonGenerator (0, 0,  $big, inherit, transparent, 0, unset, 0.25rem);
+
+  i {
+    font-size: $fs_big; // 44px
+    color: $darkGrey;
+  }
+}
+
+.button.contact {
+  @include my($large); // 36px
+  @include buttonGenerator (4rem, $large, $medium, $white, $orange, 0, unset, 0);
+
+  &:active {
+    background-color: darken($color: $orange, $amount: 10%);
+    transition: 300ms ease-in-out;
+  }
+}
+
+.button.program:hover {
+  color: lighten($color: $orange, $amount: 20%);
+  transition: 300ms ease-in-out;
+}
+
+.button.program:active {
+  color: lighten($color: $orange, $amount: 10%);
+  transition: 300ms ease-in-out;
+}
+
+.button.expand {
+  width: 100%;
+  border-style: solid;
+
+  @include my($large);
+  @include buttonGenerator (unset, $medium, $regular, $darkGrey, transparent, 1px, $lightGrey, 0.25rem);
+
+  i.material-icons {
+    color: $orange;
+    font-weight: bold;
+  }
+
+  @include wider-than($mainBp) {
+    display: none;
+  }
+
+  &:active {
+    border-color: lighten($color: $orange, $amount: 10%);
+    transition: 300ms ease-in-out;
+  }
+}

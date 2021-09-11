@@ -1,0 +1,23 @@
+.separator {
+  background-color: $orange;
+  width: 3rem;
+  height: 0.125rem;
+
+  @include my($regular);
+}
+
+.separatorMedium {
+  background-color: $orange;
+  width: $xlarge;
+  height: 0.125rem;
+
+  @include my($regular);
+}
+
+.separatorSmall {
+  background-color: $lightGrey;
+  width: $medium;
+  height: 0.125rem;
+
+  @include my($small);
+}

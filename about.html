@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./scss/main.css">
+  <title>About - Wine Tasting (out in the) Vineyard</title>
+</head>
+
+<body id="about">
+  <header class="header">
+
+    <!-- top bar: hidden for mobile -->
+    <div class="topBar flex flex-jc-end">
+      <a href="#">
+        <img class="socials" src="img/facebook.svg" alt="facebook logo icon" />
+      </a>
+      <a href="#">
+        <img class="socials" src="img/twitter.svg" alt="twitter logo icon" />
+      </a>
+      <a href="#">English</a>
+      <a href="#">My Page</a>
+      <a href="#">Logout</a>
+    </div>
+
+    <!-- nav bar: hidden for mobile -->
+    <nav class="flex flex-jc-spb flex-ai-c mobile-invisible">
+      <div class="logoPlace mobile-invisible">
+        <a href="index.html">
+          <img src="img/eventLogo.png" class="eventLogo" alt="Wine Tasting Association logo">
+        </a>
+      </div>
+
+      <div class="navlinks mobile-invisible flex">
+        <a href="index.html" class="mobile-invisible">Home</a>
+        <a href="about.html" class="mobile-invisible">About</a>
+      </div>
+    </nav>
+
+    <a class="openMenuBtn menuBtn openMenuBtn desktop-invisible">
+      <i class="material-icons">menu</i>
+    </a>
+
+    <!-- mobile menu, hidden for desktop -->
+    <div class="mobile-menu mobile-menu-closed flex-jc-c flex-ai-c">
+      <button type="button" class="button menuBtn closeMenuBtn desktop-invisible">
+        <i class="material-icons">close</i>
+      </button>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="main__info">
+      <h2 class="greetings desktop-invisible">"Hello! Wine lovers"</h2>
+      <h1 class="upper">wine tasting <br> in the vineyard <span>2021</span></h1>
+      <div class="separatorMedium mobile-invisible"></div>
+      <div class="descriptionWrapper">
+        <div class="description">An excellent opportunity to taste local
+          delicacies selected to match the various wines, to learn more from our esteemed oenologists
+          explaining the various properties of wine and to listen our live band.
+          A different way to approach wine and to discover lands,
+          scents and stories of winemakers.
+        </div>
+      </div>
+      <div class="location">
+        Please contact us per Email for any further informations <br>
+        about the Wine Tasting out in the Vineyard event <br>
+        <a href="mailto:anEmail@mail.com">winetastingevent@mail.com</a>
+      </div>
+    </section>
+
+    <section class="main__middle">
+      <h3>
+        Wine Tasting
+        <span>in the Vineyard 2021</span>
+      </h3>
+      <div class="separatorMedium"></div>
+      <p>
+        The goal of our organization is to animate more and more wineries
+        throughout Italy that organize activities, tastings and interactive events
+        outside, in the middle of the vineyards.
+      </p>
+      <div class="logoPlaceHolder">
+        <img src="img/laFicaia.png" alt="Wine Tasting Host logo">
+      </div>
+    </section>
+
+    <section class="main__bottom">
+      <h3>
+        See past Wine Tasting events
+      </h3>
+      <div class="separatorMedium"></div>
+      <p>Take a look at some past Wine Tasting events which took place
+        outside, in the middle of the vineyards.
+      </p>
+      <div class="pastEvents flex flex-ai-c">
+        <button type="button" class="button pastEventBtn ev1">
+          <span class="btnTitle">2020</span>
+          <span class="btnTxt">Wine Tasting 2020 @ Bersano's Vineyards</span>
+        </button>
+        <button type="button" class="button pastEventBtn ev2">
+          <span class="btnTitle">2019</span>
+          <span class="btnTxt">Wine Tasting 2019 @ Robino's Vineyards</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="sponsors flex flex-ai-c">
+      <h2>Partner</h2>
+      <p class="separatorMedium"></p>
+      <div class="partnersLogoContainer flex flex-jc-c flex-ai-c">
+        <img src="." class="logoPartner1" alt="Partner 1 logo">
+        <img src="." class="logoPartner2" alt="Partner 2 logo">
+        <img src="." class="logoPartner3" alt="Partner 3 logo">
+        <img src="." class="logoPartner4" alt="Partner 4 logo">
+        <img src="." class="logoPartner5" alt="Partner 5 logo">
+      </div>
+    </div>
+    <div class="copyrightsContainer flex">
+      <div class="logoPlaceholder">
+        <img src="img/laFicaia.png" class="hostLogo" alt="Event Host logo">
+      </div>
+      <div class="copyrights flex flex-jc-c">
+        <p>2021 Wine Tasting Association</p>
+        <p>This is a template web site. The information inside are invented.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/menu.js"></script>
+</body>
+
+</html>

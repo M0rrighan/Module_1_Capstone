@@ -1,0 +1,594 @@
+.main {
+  background-image: url($mainBgImgUrl);
+  background-repeat: repeat-x;
+  background-position-x: center;
+  background-blend-mode: overlay;
+  background-color: $almostWhite;
+  position: relative;
+  color: $darkGrey;
+  overflow: hidden;
+
+  @include wider-than($mainBp) {
+    top: $mainFromTop; //calculated TopBar + Navbar
+  }
+
+  &__info {
+    z-index: 15;
+
+    @include py(8.375rem);
+    @include px($lrSpacing-mobile);
+
+    @include wider-than($mainBp) {
+      @include px($lrSpacing-desktop);
+    }
+
+    h2 {
+      color: $orange;
+      font-size: $fs_large; // 2rem
+
+      @include wider-than($mainBp) {
+        font-size: $fs_xlarge; // 2.25rem-36px
+      }
+    }
+
+    h1 {
+      background-image: url($textBgImgUrl);
+      background-position: bottom center;
+      background-size: contain;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      font-size: $fs_big; // 2.75rem-44px
+      font-family: 'COCOGOOSE-LETTERPRESS', Arial, sans-serif;
+
+      span {
+        font-family: 'COCOGOOSE', Arial, sans-serif;
+      }
+
+      @include wider-than($mainBp) {
+        font-size: $fs_xbig; // 3rem
+      }
+
+      &::before {
+        content: '';
+        background-image: url($mainBgSmall_1);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 10%;
+        width: 20%;
+        position: absolute;
+        top: 55px;
+        right: 0;
+        z-index: 1;
+        animation: changeOpacity_rotate 1000ms ease-in-out;
+        animation-fill-mode: forwards;
+      }
+
+      &:hover::before {
+        opacity: 50%;
+      }
+    }
+
+    .descriptionWrapper {
+      position: relative;
+      z-index: 1;
+
+      .description {
+        background-color: $almostWhite;
+        z-index: 1;
+        font-size: $fs_regular; //1rem
+        line-height: 1.5rem;
+        border: 3px solid $white;
+        margin-top: $medium; //22px
+
+        @include px (1.5rem);
+        @include py (1.5rem);
+
+        @include wider-than($mainBp) {
+          max-width: 65%;
+          margin-top: $small; //12px
+
+          @include px ($medium); //22px
+          @include py ($medium); //22px
+        }
+      }
+
+      &::before {
+        content: '';
+        background-image: url($mainBgSmall_2);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 150%;
+        width: 70%;
+        position: absolute;
+        top: -75%;
+        right: -15%;
+        z-index: -1;
+        animation: changeOpacity_rotate 1000ms ease-in-out;
+        animation-fill-mode: forwards;
+
+        @include wider-than($mainBp) {
+          height: 200%;
+          width: 100%;
+          top: -100%;
+          right: 18%;
+        }
+      }
+
+      &::after {
+        content: '';
+        background-image: url($mainBgSmall_3);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 50%;
+        width: 50%;
+        position: absolute;
+        top: 160%;
+        right: 35%;
+        z-index: -1;
+        animation: changeOpacity_rotate 1000ms ease-in-out;
+        animation-fill-mode: forwards;
+
+        @include wider-than($mainBp) {
+          height: 150%;
+          width: 75%;
+          top: 25%;
+          right: 0%;
+        }
+      }
+
+      &:hover::before {
+        opacity: 100%;
+      }
+    }
+
+    .date {
+      font-size: $fs_xlarge; //2.25rem-36px
+      font-family: 'COCOGOOSE', Arial, sans-serif;
+
+      @include py ($small); //12px
+    }
+
+    .location {
+      font-size: $fs_regular; //1rem
+    }
+  }
+
+  &__program {
+    flex-direction: column;
+    padding-bottom: $medium; // 22px
+
+    @include px($lrSpacing-mobile);
+
+    @include wider-than($mainBp) {
+      @include px($lrSpacing-desktop);
+    }
+
+    background-color: $darkBlue;
+    background-size: 25px 25px;
+    background-image:
+      linear-gradient(to left, transparent 70%, $darkBlue 0, $darkBlue 100%),
+      linear-gradient(to top, transparent 70%, $darkBlue 0, $darkBlue 100%),
+      linear-gradient(to top right, transparent 5%, $almostBlack 0, $almostBlack 13%, transparent 0, transparent 55%, $almostBlack 0, $almostBlack 63%, transparent 0),
+      linear-gradient(to bottom right, transparent 5%, $almostBlack 0, $almostBlack 13%, transparent 0, transparent 55%, $almostBlack 0, $almostBlack 63%, transparent 0);
+    background-position: -0.5px 0, 0 0, 7.5px 0, 7.5px 7.5px;
+    background-repeat: repeat;
+    transition: 900ms ease-in;
+
+    &:hover {
+      background-position: 24.5px 0, 0 -24.5px, 7.5px 0, 7.5px 7.5px;
+      transition: 900ms ease-in;
+    }
+
+    .sectionTitle {
+      color: $white;
+      font-size: $fs_large; // 2rem
+      padding-top: $xbig; // 3rem-48px
+    }
+
+    ul.programContent {
+      @include my($medium); // 22px
+
+      flex-basis: 100%;
+      flex-wrap: wrap;
+      gap: $regular; // 1rem
+
+      @include wider-than($mainBp) {
+        flex-wrap: nowrap;
+        gap: 0.175rem;
+      }
+
+      li.programItemCard {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 17% 25% 58%;
+        background-color: #ffffff20;
+        border: 2px solid transparent;
+        transition: 300ms ease-in-out;
+
+        &:hover {
+          border-color: $white;
+          transform: scale(1.1);
+          box-shadow: 0 0 1.5rem 1.5rem hsla(0, 0%, 0%, 0.35);
+          transition: 300ms ease-in-out;
+        }
+
+        @include wider-than($mainBp) {
+          grid-template-columns: 100%;
+          grid-template-rows: 27% 5% 66%;
+
+          @include px(0.625rem);
+        }
+
+        .programCardIcon,
+        .programCardTitle {
+          @include my(auto);
+          @include mx(auto);
+        }
+
+        .programCardIcon {
+          i {
+            color: $white;
+            background-color: transparent;
+            font-size: $xlarge; //36px
+          }
+        }
+
+        .programCardTitle {
+          color: $orange;
+          font-size: $fs_medium1; // 18px
+          font-weight: bold;
+          word-wrap: break-word;
+          margin-left: unset;
+
+          @include wider-than($mainBp) {
+            font-size: $small; // 0.875rem-14px;
+            margin-left: auto;
+          }
+        }
+
+        .programCardDescription {
+          color: $almostWhite;
+          font-size: $small; // 0.875rem-14px;
+          line-height: 1.5rem;
+          padding-right: $small; //14px
+
+          @include my($regular); //1rem
+          @include mx(auto);
+
+          @include wider-than($mainBp) {
+            @include px(0);
+          }
+        }
+      }
+    }
+
+    a {
+      @include my($large); // 36px
+
+      font-size: $fs_regular;
+      color: $almostWhite;
+      text-decoration: underline;
+    }
+  }
+
+  &__speakers {
+    flex-direction: column;
+    padding-bottom: $medium; //22px
+    background-color: $almostWhite;
+
+    @include px($lrSpacing-mobile);
+
+    @include wider-than($mainBp) {
+      @include px($lrSpacing-desktop);
+    }
+
+    h2 {
+      font-size: $fs_large; //2rem
+      padding-top: $xbig; // 3rem
+      color: $darkGrey;
+    }
+
+    .speakersContent {
+      flex-basis: 100%;
+      flex-wrap: wrap;
+      gap: $large; // 2rem
+
+      @include my($medium); // 22px
+
+      @include wider-than($mainBp) {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr;
+        row-gap: $medium; // 22px
+      }
+
+      .speakerCard {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 34% 66%;
+
+        @include wider-than($mainBp) {
+          grid-template-columns: 36.2% 63.8%;
+          grid-template-rows: auto;
+        }
+
+        .speakerPicture {
+          position: relative;
+          padding: 10% 0;
+
+          @extend .flex;
+          @extend .flex-jc-c;
+
+          .pictureHolder {
+            z-index: 1;
+            position: relative;
+            width: 80%;
+
+            .picture {
+              width: 100%;
+              height: auto;
+            }
+
+            &::before {
+              content: '';
+              width: 50%;
+              height: 50%;
+              position: absolute;
+              top: -12.5%;
+              left: -12.5%;
+              z-index: -1;
+              background-color: #fff;
+              background-image:
+                linear-gradient(to top left, transparent 75%, $almostBlack 0),
+                linear-gradient(to top left, $almostBlack 25%, transparent 0),
+                linear-gradient(to top right, $almostBlack 25%, transparent 0),
+                linear-gradient(to top right, transparent 75%, $almostBlack 0);
+              background-size: 17% 17%;
+              background-position: 0 0, -51% -51%, 51% 0, 0 51%;
+              background-repeat: repeat;
+              transition: 500ms ease-in-out;
+
+              @include wider-than($mainBp) {
+                opacity: 50%;
+              }
+            }
+
+            &:hover::before {
+              background-position: 51% 0, 0 -51%, 0 0, -51% 51%;
+              transition: 500ms ease-in-out;
+            }
+          }
+        }
+
+        .speakerData {
+          @include px(0.25rem); // 4px
+
+          .speakerName {
+            font-size: $fs_medium; // 22px
+            letter-spacing: -0.0625em;
+            padding-bottom: 0.25rem; // 4px
+            color: $darkGrey;
+            font-weight: bold;
+          }
+
+          .speakerRole {
+            font-size: $fs_regular; // 1rem
+            font-style: italic;
+            color: $orange;
+          }
+
+          .speakerInfo {
+            font-size: $fs_xsmall; // 0.75rem-12px
+            color: $darkGrey;
+          }
+        }
+      }
+    }
+  }
+}
+
+#about .main {
+  @extend .main;
+
+  text-align: center;
+  line-height: 1.5;
+  background-image: none;
+
+  &__info {
+    @include px($lrSpacing-mobile-about);
+
+    padding-top: 7.5rem;
+    padding-bottom: $large; //2.25rem-36px
+
+    @include wider-than($mainBp) {
+      padding-left: $lSpace-desk-About;
+      padding-right: $rSpace-desk-About;
+      padding-bottom: 4.875rem;
+    }
+  }
+
+  h1 {
+    background-image: none;
+    color: $orange;
+    -webkit-text-fill-color: unset;
+
+    &::before {
+      content: '';
+      transform: scaleX(-1);
+      top: 55px;
+      left: 0;
+    }
+  }
+
+  .separatorMedium {
+    @include mx(auto);
+  }
+
+  .descriptionWrapper {
+    .description {
+      background-color: $white;
+      border: 3px solid #ececec;
+      margin-top: $xlarge; // 36px
+
+      @include px ($regular); // 1rem
+      @include py ($medium-l); // 24px
+
+      @include wider-than($mainBp) {
+        max-width: 100%;
+        margin-top: $medium-l; // 24px
+
+        @include px (3.25rem);
+      }
+    }
+
+    &::before {
+      content: '';
+      transform: scaleX(-1);
+      top: -75%;
+      right: 50%;
+
+      @include wider-than($mainBp) {
+        top: -100%;
+        right: 75%;
+      }
+    }
+
+    &::after {
+      top: 126%;
+      right: 89%;
+
+      @include wider-than($mainBp) {
+        height: 74%;
+        width: 75%;
+        top: 79%;
+        right: -4%;
+      }
+    }
+  }
+
+  .location {
+    margin-top: 1.75rem;
+    margin-bottom: 2.375rem;
+    line-height: 1.6;
+
+    @include wider-than($mainBp) {
+      margin-top: 2.375rem;
+      margin-bottom: 2.5rem;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  &__middle,
+  &__bottom {
+    background-color: $white;
+    border-bottom: 1px solid #ececec;
+
+    @include px($lrSpacing-mobile-about);
+
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+
+    @include wider-than($mainBp) {
+      padding-left: $lSpace-desk-About;
+      padding-right: $rSpace-desk-About;
+      padding-top: 2.875rem;
+      padding-bottom: 2.875rem;
+    }
+
+    h3 {
+      font-size: $fs_medium2; // 1.625rem-26px
+    }
+
+    h3 span {
+      display: block;
+
+      @include wider-than($mainBp) {
+        display: inline-block;
+      }
+    }
+
+    p {
+      @include wider-than($mainBp) {
+        @include px(4.75rem);
+      }
+    }
+  }
+
+  .logoPlaceHolder {
+    border: 1px solid #ececec;
+    width: 100%;
+    margin-top: $large; //2rem
+
+    @include py(1.25rem);
+
+    @include wider-than($mainBp) {
+      width: 60%;
+      margin-top: 2.625rem;
+
+      @include mx(auto);
+    }
+
+    img {
+      filter: invert(1);
+      width: 100%;
+    }
+  }
+
+  .pastEvents {
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 3.25rem;
+
+    @include wider-than($mainBp) {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  .pastEventBtn {
+    width: 100%;
+    color: $white;
+    background-color: $orange;
+    border: none;
+    border-radius: 0;
+    padding-top: 4.75em;
+    padding-bottom: 4.5em;
+
+    @include wider-than($mainBp) {
+      width: 50%;
+    }
+
+    span {
+      display: block;
+    }
+
+    .btnTitle {
+      font-weight: bold;
+      font-size: 1.625rem;
+      line-height: 1.5;
+    }
+
+    .btnTxt {
+      font-size: 1.125rem;
+      line-height: 1.5;
+    }
+  }
+
+  .ev1 {
+    background-image: url($pastEvent1);
+    background-position: center center;
+    background-size: auto;
+    background-blend-mode: overlay;
+  }
+
+  .ev2 {
+    background-image: url($pastEvent2);
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: overlay;
+  }
+}
